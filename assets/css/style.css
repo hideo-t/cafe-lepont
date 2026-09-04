@@ -347,3 +347,9 @@ a{ color:var(--red-deep); }
 }
 
 .point svg{ color:var(--red); }
+
+/* 団体でのご利用（.standing を情報帯として再利用している） */
+.standing .btn{ margin-top:.4rem; }
+@media (min-width:40rem){
+  .standing .btn{ align-self:flex-start; padding-inline:2rem; }
+}
