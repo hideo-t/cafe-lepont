@@ -1,0 +1,12 @@
+# OS
+Thumbs.db
+desktop.ini
+.DS_Store
+
+# エディタ
+.vscode/
+.idea/
+*.swp
+
+# 撮影データの原本（軽量化前）は入れない
+assets/img/_raw/

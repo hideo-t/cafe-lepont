@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 380" width="720" height="380"
+     role="img" aria-labelledby="routeTitle routeDesc"
+     font-family="'Noto Sans JP','Hiragino Kaku Gothic ProN','Yu Gothic',sans-serif">
+  <title id="routeTitle">国道294号からカフェるぽんまでのルート図</title>
+  <desc id="routeDesc">国道294号から新道に入り、一方通行の道を経てカフェるぽん（白河市向新蔵50）に至る経路の模式図。駐車場は8台。</desc>
+
+  <!--
+    ★このファイルだけ書き換えればサイト全体のルート図が更新されます（TOP・店舗案内で共用）。
+    ★交差点名・分岐位置・一方通行の進入方向・所要時間は未確定です。SETUP.md を参照。
+  -->
+
+  <rect x="0" y="0" width="720" height="380" fill="#FAF5E9"/>
+
+  <!-- 国道294号 -->
+  <rect x="0" y="296" width="720" height="26" fill="#4A4038"/>
+  <rect x="0" y="307" width="720" height="4" fill="#E0A62F"/>
+  <text x="20" y="345" fill="#4A4038" font-size="18" font-weight="700">国道294号</text>
+  <text x="128" y="345" fill="#98867A" font-size="13">白河市街方面　←　│　→　郡山方面</text>
+
+  <!-- 分岐点 -->
+  <circle cx="300" cy="309" r="14" fill="#C43B2E"/>
+  <circle cx="300" cy="309" r="5" fill="#FAF5E9"/>
+  <text x="324" y="303" fill="#C43B2E" font-size="16" font-weight="700">ここで曲がります</text>
+  <text x="324" y="323" fill="#98867A" font-size="12">◯◯交差点／目印：◯◯（★未確定）</text>
+
+  <!-- 新道 -->
+  <rect x="288" y="150" width="24" height="150" fill="#6E6055"/>
+  <text x="326" y="200" fill="#2E5240" font-size="16" font-weight="700">新　道</text>
+  <text x="326" y="220" fill="#98867A" font-size="12">294号から直接入れます。この道が知られていません</text>
+
+  <!-- 一方通行 -->
+  <rect x="150" y="140" width="150" height="22" fill="#6E6055"/>
+  <text x="150" y="128" fill="#4A4038" font-size="13" font-weight="700">一方通行（進入方向に注意）</text>
+  <polygon points="240,151 226,144 226,158" fill="#FAF5E9"/>
+  <polygon points="198,151 184,144 184,158" fill="#FAF5E9"/>
+
+  <!-- 店舗 -->
+  <rect x="58" y="96" width="116" height="78" fill="#C43B2E"/>
+  <text x="116" y="129" fill="#FFF6EE" text-anchor="middle" font-size="18" font-weight="900">カフェ</text>
+  <text x="116" y="152" fill="#FFF6EE" text-anchor="middle" font-size="18" font-weight="900">るぽん</text>
+  <text x="58" y="88" fill="#98867A" font-size="12">白河市向新蔵50</text>
+
+  <!-- 駐車場 -->
+  <rect x="58" y="34" width="116" height="46" fill="none" stroke="#2E5240" stroke-width="3" stroke-dasharray="8 5"/>
+  <text x="116" y="64" fill="#2E5240" text-anchor="middle" font-size="15" font-weight="700">駐車場 8台</text>
+
+  <!-- 所要 -->
+  <rect x="440" y="88" width="248" height="92" fill="#FFFDF6" stroke="#2A211C" stroke-width="3"/>
+  <text x="458" y="115" fill="#C43B2E" font-size="12" font-weight="700">国道294号から</text>
+  <text x="458" y="150" fill="#2A211C" font-size="30" font-weight="900">約 ◯ 分</text>
+  <text x="458" y="170" fill="#98867A" font-size="12">曲がるのは ◯ 回だけ（★未確定）</text>
+</svg>

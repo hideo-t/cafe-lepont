@@ -1,0 +1,349 @@
+@charset "utf-8";
+/* ==========================================================================
+   カフェるぽん（Café Le Pont） — 共通スタイル
+   配色：提案 A案「食堂の赤」／ 副色に深緑（提案 B案より採用）
+   方針：モバイルファースト。角丸は使わない。余白は詰め気味。朱は「点」で使う。
+   ========================================================================== */
+
+:root{
+  /* --- 色。ここ以外に色を直接書かないこと --- */
+  --ground:      #FAF5E9;  /* 生成り：地 */
+  --surface:     #FFFDF6;  /* 白に近い生成り：カード面 */
+  --surface-2:   #F3EAD6;  /* 一段沈めた面 */
+  --ink:         #2A211C;  /* 墨茶：本文 */
+  --ink-2:       #6E5C50;  /* 補足文 */
+  --ink-3:       #98867A;  /* 注記 */
+  --rule:        #DFD3BC;  /* 罫 */
+  --rule-strong: #C9B999;
+  --red:         #C43B2E;  /* 朱赤：主色。価格・ボタン・見出しのみ */
+  --red-deep:    #9B2D22;
+  --red-wash:    #F6E3DE;
+  --green:       #2E5240;  /* 深緑：副色。情報帯・フッター */
+  --yolk:        #E0A62F;  /* 卵黄：バッジ */
+  --straw:       #D9C9A3;
+
+  /* --- 書体 --- */
+  /* 日本語Webフォントは重い。回線が細い前提のため Noto Sans JP 一族に絞り、
+     手書き風フォントは採用していない（提案時の判断／SETUP.md 参照）。 */
+  --f-base: "Noto Sans JP", "Hiragino Kaku Gothic ProN", "Yu Gothic", "Meiryo", sans-serif;
+  --f-num:  "Archivo Black", "Noto Sans JP", sans-serif;
+
+  --col: min(100% - 1.6rem, 62rem);
+  --bar-h: 3.75rem;         /* 下部固定バーの高さ */
+}
+
+*,*::before,*::after{ box-sizing:border-box; }
+
+html{ -webkit-text-size-adjust:100%; }
+
+body{
+  margin:0;
+  padding-bottom:var(--bar-h);
+  background:var(--ground);
+  color:var(--ink);
+  font-family:var(--f-base);
+  font-size:16px;
+  line-height:1.8;
+  -webkit-font-smoothing:antialiased;
+}
+
+img{ max-width:100%; height:auto; display:block; }
+p{ margin:0; }
+h1,h2,h3,h4{ margin:0; font-weight:900; line-height:1.35; text-wrap:balance; }
+ul,ol,dl,dd{ margin:0; padding:0; }
+li{ list-style:none; }
+a{ color:var(--red-deep); }
+:focus-visible{ outline:3px solid var(--red); outline-offset:2px; }
+
+.wrap{ width:var(--col); margin-inline:auto; }
+.num{ font-family:var(--f-num); font-variant-numeric:tabular-nums; letter-spacing:.01em; }
+
+/* 未確定値。SETUP.md の対応が済んだら .todo ごと外す */
+.todo{
+  background:var(--red-wash);
+  box-shadow:0 0 0 1px var(--red) inset;
+  padding:0 .18em;
+}
+
+/* --------------------------------------------------------------------------
+   制作中バー ─ 公開前に全ページから削除すること
+   -------------------------------------------------------------------------- */
+.wip{
+  background:var(--red); color:#FFF6EE;
+  font-size:.78rem; font-weight:700; line-height:1.6;
+  padding:.5rem 0;
+}
+.wip .wrap{ display:flex; gap:.6rem; flex-wrap:wrap; align-items:baseline; }
+.wip b{ letter-spacing:.08em; }
+.wip span{ font-weight:400; opacity:.92; }
+
+/* --------------------------------------------------------------------------
+   ヘッダ
+   -------------------------------------------------------------------------- */
+.hours-bar{
+  background:var(--green); color:#F2EAD6;
+  font-size:.76rem; font-weight:700; letter-spacing:.02em;
+}
+.hours-bar .wrap{
+  display:flex; justify-content:space-between; gap:.8rem; flex-wrap:wrap;
+  padding:.4rem 0;
+}
+.hours-bar .num{ font-size:.86rem; }
+
+.site-hd{ background:var(--surface); border-bottom:3px solid var(--ink); }
+.site-hd .wrap{ display:flex; flex-direction:column; gap:.65rem; padding:.85rem 0 0; }
+
+.brand{ display:flex; align-items:baseline; gap:.55rem; flex-wrap:wrap; text-decoration:none; color:var(--ink); }
+.brand .jp{ font-size:1.32rem; font-weight:900; letter-spacing:.02em; }
+.brand .fr{ font-family:var(--f-num); font-size:.68rem; color:var(--ink-3); letter-spacing:.08em; }
+
+.nav{ display:flex; gap:0; overflow-x:auto; scrollbar-width:none; }
+.nav::-webkit-scrollbar{ display:none; }
+.nav a{
+  flex:0 0 auto;
+  padding:.55rem .85rem;
+  font-size:.88rem; font-weight:700; text-decoration:none;
+  color:var(--ink-2);
+  border-bottom:4px solid transparent;
+  white-space:nowrap;
+}
+.nav a:hover{ color:var(--ink); }
+.nav a[aria-current="page"]{ color:var(--red); border-bottom-color:var(--red); }
+
+/* --------------------------------------------------------------------------
+   写真の枠 ─ 差し替えてもレイアウトが動かないよう比率を固定している
+   実写真が入ったら .frame-note ごと削除して src を差し替える
+   -------------------------------------------------------------------------- */
+.frame{ position:relative; overflow:hidden; background:var(--surface-2); }
+.frame img{ width:100%; height:100%; object-fit:cover; }
+.frame-4x3{ aspect-ratio:4/3; }
+.frame-1x1{ aspect-ratio:1/1; }
+.frame-16x9{ aspect-ratio:16/9; }
+.frame-note{
+  position:absolute; inset:auto 0 0 0;
+  background:rgba(42,33,28,.82); color:#F7F1E1;
+  font-size:.72rem; font-weight:700; line-height:1.55;
+  padding:.4rem .6rem;
+}
+
+/* --------------------------------------------------------------------------
+   ファーストビュー
+   -------------------------------------------------------------------------- */
+.hero{ border-bottom:3px solid var(--ink); background:var(--surface); }
+.hero .frame{ border-bottom:3px solid var(--ink); }
+.hero-body{ padding:1.1rem 0 1.3rem; display:flex; flex-direction:column; gap:.8rem; }
+.hero h1{ font-size:clamp(1.55rem,6.4vw,2.5rem); letter-spacing:-.01em; }
+.hero h1 .fr{ color:var(--red); }
+.hero .lede{ font-size:.95rem; color:var(--ink-2); max-width:32em; }
+
+.btns{ display:grid; grid-template-columns:1fr 1fr; gap:.55rem; }
+.btn{
+  display:block; text-align:center; text-decoration:none;
+  font-size:.95rem; font-weight:900; letter-spacing:.02em;
+  padding:.78rem .5rem;
+  border:3px solid var(--ink);
+}
+.btn-primary{ background:var(--red); color:#FFF6EE; border-color:var(--red); }
+.btn-primary:hover{ background:var(--red-deep); border-color:var(--red-deep); }
+.btn-ghost{ background:var(--surface); color:var(--ink); }
+.btn-ghost:hover{ background:var(--surface-2); }
+
+.factline{
+  display:flex; justify-content:space-between; gap:.8rem; flex-wrap:wrap;
+  border-top:3px solid var(--ink); border-bottom:3px solid var(--ink);
+  padding:.55rem 0; font-size:.84rem; font-weight:700;
+}
+
+/* --------------------------------------------------------------------------
+   セクション共通
+   -------------------------------------------------------------------------- */
+.sec{ padding:2.2rem 0 0; }
+.sec-hd{
+  display:flex; align-items:baseline; gap:.7rem; flex-wrap:wrap;
+  border-bottom:3px solid var(--ink); padding-bottom:.45rem; margin-bottom:1.1rem;
+}
+.sec-hd h2{ font-size:clamp(1.15rem,4.4vw,1.5rem); }
+.sec-hd .sub{ font-size:.76rem; font-weight:700; color:var(--ink-3); letter-spacing:.06em; }
+.sec-note{ font-size:.9rem; color:var(--ink-2); max-width:38em; }
+.sec-note + .sec-note{ margin-top:.55rem; }
+.sec-more{ margin-top:1rem; }
+
+/* --------------------------------------------------------------------------
+   どんな店か（4項目）
+   -------------------------------------------------------------------------- */
+.points{ display:grid; gap:1px; grid-template-columns:1fr 1fr; background:var(--rule-strong); border:1px solid var(--rule-strong); }
+.point{ background:var(--surface); padding:.95rem .8rem 1.05rem; display:flex; flex-direction:column; gap:.45rem; }
+.point svg{ width:2.1rem; height:2.1rem; }
+.point h3{ font-size:1rem; }
+.point p{ font-size:.82rem; color:var(--ink-2); line-height:1.7; }
+
+/* --------------------------------------------------------------------------
+   価格帯 ─ TOP の最重要セクション。「高そう」を潰す
+   -------------------------------------------------------------------------- */
+.pricebar{ background:var(--surface); border:3px solid var(--ink); padding:1.2rem 1rem 1.35rem; }
+.pricebar .kicker{ font-size:.78rem; font-weight:900; letter-spacing:.16em; color:var(--red); }
+.pricebar .amount{ display:flex; align-items:baseline; gap:.15rem; flex-wrap:wrap; margin:.2rem 0 .1rem; }
+.pricebar .amount .n{ font-family:var(--f-num); font-size:clamp(3.4rem,16vw,5.2rem); line-height:.9; color:var(--red); }
+.pricebar .amount .yen{ font-size:clamp(1.3rem,5vw,1.9rem); font-weight:900; color:var(--red); }
+.pricebar .amount .kara{ font-size:clamp(1.1rem,4.2vw,1.5rem); font-weight:900; color:var(--ink); margin-left:.15rem; }
+.pricebar .say{ font-size:1rem; font-weight:700; margin-top:.3rem; }
+.pricebar ul{ display:flex; flex-wrap:wrap; gap:.4rem; margin-top:.85rem; }
+.pricebar li{
+  font-size:.8rem; font-weight:700;
+  background:var(--yolk); color:var(--ink);
+  padding:.2rem .6rem;
+}
+
+/* --------------------------------------------------------------------------
+   メニュー
+   -------------------------------------------------------------------------- */
+.dishes{ display:grid; gap:1rem; grid-template-columns:1fr 1fr; }
+.dish{ background:var(--surface); border:1px solid var(--rule-strong); display:flex; flex-direction:column; }
+.dish .body{ padding:.7rem .75rem .85rem; display:flex; flex-direction:column; gap:.25rem; flex:1; }
+.dish h3{ font-size:.98rem; line-height:1.45; }
+.dish .desc{ font-size:.78rem; color:var(--ink-2); line-height:1.65; flex:1; }
+.dish .price{ display:flex; align-items:baseline; gap:.1rem; margin-top:.35rem; }
+.dish .price .n{ font-family:var(--f-num); font-size:1.65rem; line-height:1; color:var(--red); }
+.dish .price .yen{ font-size:.9rem; font-weight:900; color:var(--red); }
+.dish .tag{ align-self:flex-start; font-size:.72rem; font-weight:700; background:var(--yolk); color:var(--ink); padding:.12rem .45rem; }
+
+/* メニューページの一覧 */
+.mcat{ margin-top:1.8rem; }
+.mcat > h2{
+  font-size:1.25rem; border-left:10px solid var(--red);
+  padding:.15rem 0 .15rem .65rem; margin-bottom:.5rem;
+}
+.mcat > .lead{ font-size:.86rem; color:var(--ink-2); margin-bottom:.9rem; max-width:38em; }
+.mlist{ border-top:2px solid var(--ink); }
+.mrow{
+  display:flex; align-items:baseline; gap:.8rem;
+  border-bottom:1px solid var(--rule); padding:.7rem 0;
+}
+.mrow .name{ font-size:1rem; font-weight:700; flex:1; line-height:1.5; }
+.mrow .name small{ display:block; font-size:.76rem; font-weight:400; color:var(--ink-2); }
+.mrow .amt{ display:flex; align-items:baseline; gap:.1rem; white-space:nowrap; }
+.mrow .amt .n{ font-family:var(--f-num); font-size:1.5rem; line-height:1; color:var(--red); }
+.mrow .amt .yen{ font-size:.82rem; font-weight:900; color:var(--red); }
+
+/* --------------------------------------------------------------------------
+   アクセス
+   -------------------------------------------------------------------------- */
+.alert{
+  /* 工事期間中のみ表示。終わったらこのブロックごと削除する */
+  background:var(--red-wash); border:3px solid var(--red);
+  padding:.85rem .9rem; display:flex; flex-direction:column; gap:.3rem;
+}
+.alert b{ color:var(--red-deep); font-size:.95rem; }
+.alert p{ font-size:.85rem; color:var(--ink); line-height:1.7; }
+
+.routefig{ margin-top:1rem; border:3px solid var(--ink); background:var(--surface); }
+.routefig .scroll{ overflow-x:auto; }
+.routefig img{ min-width:33rem; width:100%; }
+.routefig figcaption{
+  border-top:2px solid var(--ink); padding:.55rem .7rem;
+  font-size:.78rem; color:var(--ink-2); line-height:1.6;
+}
+
+.mapbox{ margin-top:1rem; border:3px solid var(--ink); background:var(--surface-2); aspect-ratio:4/3; }
+.mapbox iframe{ display:block; width:100%; height:100%; border:0; }
+
+.infotable{ margin-top:1rem; border-top:2px solid var(--ink); }
+.infotable div{ display:flex; gap:.9rem; border-bottom:1px solid var(--rule); padding:.6rem 0; font-size:.9rem; }
+.infotable dt{ flex:0 0 5.5rem; font-weight:700; color:var(--green); }
+.infotable dd{ flex:1; color:var(--ink); line-height:1.7; }
+
+/* --------------------------------------------------------------------------
+   裂き織り
+   -------------------------------------------------------------------------- */
+.sakiori-lead{ display:flex; flex-direction:column; gap:.9rem; }
+.works{ display:grid; gap:1rem; grid-template-columns:1fr 1fr; }
+.work{ background:var(--surface); border:1px solid var(--rule-strong); }
+.work .body{ padding:.65rem .7rem .8rem; }
+.work h3{ font-size:.92rem; }
+.work p{ font-size:.78rem; color:var(--ink-2); margin-top:.15rem; }
+
+/* --------------------------------------------------------------------------
+   お知らせ
+   ─ 更新が止まっても不自然に見えないよう、上段は「常に正しい常設情報」。
+     個別のお知らせが 0 件でもページとして成立する。
+   -------------------------------------------------------------------------- */
+.standing{ background:var(--surface); border:3px solid var(--green); padding:1rem .95rem 1.15rem; display:flex; flex-direction:column; gap:.55rem; }
+.standing h2{ font-size:1.05rem; color:var(--green); }
+.standing dl{ display:flex; flex-direction:column; gap:.35rem; font-size:.9rem; }
+.standing dl div{ display:flex; gap:.7rem; }
+.standing dt{ flex:0 0 5rem; font-weight:700; }
+.standing dd{ flex:1; }
+
+.posts{ margin-top:1.8rem; border-top:2px solid var(--ink); }
+.post{ border-bottom:1px solid var(--rule); padding:.9rem 0; display:flex; flex-direction:column; gap:.2rem; }
+.post .date{ font-family:var(--f-num); font-size:.78rem; color:var(--ink-3); }
+.post h3{ font-size:1rem; }
+.post p{ font-size:.88rem; color:var(--ink-2); }
+
+/* --------------------------------------------------------------------------
+   フッタ／下部固定バー
+   -------------------------------------------------------------------------- */
+.site-ft{ margin-top:2.6rem; background:var(--green); color:#EDE4D0; }
+.site-ft .wrap{ padding:1.5rem 0 1.8rem; display:flex; flex-direction:column; gap:.75rem; }
+.site-ft .name{ font-size:1.15rem; font-weight:900; color:#F7F1E1; }
+.site-ft .name small{ display:block; font-family:var(--f-num); font-size:.6rem; letter-spacing:.1em; opacity:.72; margin-top:.25rem; }
+.site-ft dl{ display:flex; flex-direction:column; gap:.3rem; font-size:.88rem; }
+.site-ft dl div{ display:flex; gap:.8rem; }
+.site-ft dt{ flex:0 0 4.5rem; font-weight:700; opacity:.8; }
+.site-ft dd{ flex:1; }
+.site-ft a{ color:#F7F1E1; }
+.site-ft .fnav{ display:flex; flex-wrap:wrap; gap:.15rem 1rem; font-size:.86rem; font-weight:700; border-top:1px solid rgba(247,241,225,.25); padding-top:.8rem; }
+.site-ft .fnav a{ text-decoration:none; }
+.site-ft .fnav a:hover{ text-decoration:underline; }
+.site-ft .copy{ font-size:.74rem; opacity:.65; }
+
+.fixbar{
+  position:fixed; inset:auto 0 0 0; z-index:50;
+  display:grid; grid-template-columns:1fr 1fr;
+  border-top:3px solid var(--ink);
+}
+.fixbar a{
+  display:flex; align-items:center; justify-content:center; gap:.4rem;
+  height:var(--bar-h);
+  font-size:.95rem; font-weight:900; letter-spacing:.02em;
+  text-decoration:none;
+}
+.fixbar svg{ width:1.15rem; height:1.15rem; flex:0 0 auto; }
+.fixbar .tel{ background:var(--green); color:#F7F1E1; }
+.fixbar .map{ background:var(--red); color:#FFF6EE; }
+
+/* --------------------------------------------------------------------------
+   画面が広いとき
+   -------------------------------------------------------------------------- */
+@media (min-width:40rem){
+  body{ font-size:16.5px; }
+  .points{ grid-template-columns:repeat(4,1fr); }
+  .dishes{ grid-template-columns:repeat(3,1fr); }
+  .works{ grid-template-columns:repeat(3,1fr); }
+  .btns{ grid-template-columns:auto auto; justify-content:start; }
+  .btn{ padding:.78rem 2rem; }
+  .hero{ display:grid; grid-template-columns:1.15fr 1fr; align-items:stretch; }
+  .hero .frame{ border-bottom:0; border-right:3px solid var(--ink); height:100%; aspect-ratio:auto; min-height:22rem; }
+  .hero-body{ padding:1.6rem 1.6rem 1.7rem; justify-content:center; }
+  .hero .factline{ margin-top:.4rem; }
+}
+
+@media (min-width:60rem){
+  :root{ --bar-h:0rem; }
+  body{ padding-bottom:0; }
+  .fixbar{ position:static; grid-template-columns:auto auto; justify-content:center; border-top:0; }
+  .fixbar a{ height:auto; padding:.9rem 2rem; }
+  .sec{ padding:3rem 0 0; }
+}
+
+@media (prefers-reduced-motion:reduce){
+  *{ animation:none !important; transition:none !important; }
+}
+
+/* 印刷（店頭で刷って使うことがある想定） */
+@media print{
+  .wip,.fixbar,.nav,.mapbox{ display:none; }
+  body{ padding-bottom:0; background:#fff; }
+}
+
+.point svg{ color:var(--red); }
