@@ -1,7 +1,7 @@
 @charset "utf-8";
 /* ==========================================================================
    カフェるぽん（Café Le Pont） — 共通スタイル
-   配色：提案 A案「食堂の赤」／ 副色に深緑（提案 B案より採用）
+   配色：フランスの木のおもちゃを思わせる赤・青・黄・緑
    方針：モバイルファースト。角丸は使わない。余白は詰め気味。朱は「点」で使う。
    ========================================================================== */
 
@@ -15,11 +15,12 @@
   --ink-3:       #98867A;  /* 注記 */
   --rule:        #DFD3BC;  /* 罫 */
   --rule-strong: #C9B999;
-  --red:         #C43B2E;  /* 朱赤：主色。価格・ボタン・見出しのみ */
-  --red-deep:    #9B2D22;
+  --red:         #D62839;
+  --red-deep:    #A7192A;
   --red-wash:    #F6E3DE;
-  --green:       #2E5240;  /* 深緑：副色。情報帯・フッター */
-  --yolk:        #E0A62F;  /* 卵黄：バッジ */
+  --green:       #147D64;
+  --blue:        #2155A4;
+  --yolk:        #F2B705;
   --straw:       #D9C9A3;
 
   /* --- 書体 --- */
@@ -131,6 +132,7 @@ a{ color:var(--red-deep); }
    -------------------------------------------------------------------------- */
 .hero{ border-bottom:3px solid var(--ink); background:var(--surface); }
 .hero .frame{ border-bottom:3px solid var(--ink); }
+.hero .frame img{ object-position:center 47%; }
 .hero-body{ padding:1.1rem 0 1.3rem; display:flex; flex-direction:column; gap:.8rem; }
 .hero h1{ font-size:clamp(1.55rem,6.4vw,2.5rem); letter-spacing:-.01em; }
 .hero h1 .fr{ color:var(--red); }
@@ -153,6 +155,17 @@ a{ color:var(--red-deep); }
   border-top:3px solid var(--ink); border-bottom:3px solid var(--ink);
   padding:.55rem 0; font-size:.84rem; font-weight:700;
 }
+
+/* 2階のおもちゃ部屋 */
+.toyroom{ background:var(--blue); color:#fff; border-bottom:3px solid var(--ink); }
+.toyroom-inner{ padding:1.5rem 0; display:grid; gap:1rem; }
+.toy-kicker{ font-family:var(--f-num); color:var(--yolk); font-size:.78rem; letter-spacing:.12em; }
+.toyroom h2{ font-size:clamp(1.35rem,5vw,2rem); }
+.toyroom p:not(.toy-kicker){ margin-top:.55rem; max-width:38rem; font-size:.9rem; line-height:1.8; }
+.toy-tags{ display:flex; flex-wrap:wrap; gap:.45rem; }
+.toy-tags li{ background:var(--yolk); color:var(--ink); padding:.28rem .6rem; font-family:var(--f-num); font-size:.72rem; border:2px solid var(--ink); }
+.toy-tags li:nth-child(2){ background:var(--red); color:#fff; }
+.toy-tags li:nth-child(3){ background:#fff; }
 
 /* --------------------------------------------------------------------------
    セクション共通
@@ -206,6 +219,7 @@ a{ color:var(--red-deep); }
 .dish .price .n{ font-family:var(--f-num); font-size:1.65rem; line-height:1; color:var(--red); }
 .dish .price .yen{ font-size:.9rem; font-weight:900; color:var(--red); }
 .dish .tag{ align-self:flex-start; font-size:.72rem; font-weight:700; background:var(--yolk); color:var(--ink); padding:.12rem .45rem; }
+.family-specials .dishes{ grid-template-columns:1fr; }
 
 /* メニューページの一覧 */
 .mcat{ margin-top:1.8rem; }
@@ -224,6 +238,12 @@ a{ color:var(--red-deep); }
 .mrow .amt{ display:flex; align-items:baseline; gap:.1rem; white-space:nowrap; }
 .mrow .amt .n{ font-family:var(--f-num); font-size:1.5rem; line-height:1; color:var(--red); }
 .mrow .amt .yen{ font-size:.82rem; font-weight:900; color:var(--red); }
+
+@media (min-width:42rem){
+  .toyroom-inner{ grid-template-columns:.7fr 2fr; align-items:start; }
+  .toy-tags{ grid-column:2; }
+  .family-specials .dishes{ grid-template-columns:repeat(3,1fr); }
+}
 
 /* --------------------------------------------------------------------------
    アクセス
