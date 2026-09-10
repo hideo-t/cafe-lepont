@@ -131,8 +131,8 @@ a{ color:var(--red-deep); }
    ファーストビュー
    -------------------------------------------------------------------------- */
 .hero{ border-bottom:3px solid var(--ink); background:var(--surface); }
-.hero .frame{ border-bottom:3px solid var(--ink); }
-.hero .frame img{ object-position:center 47%; }
+.hero .frame{ border-bottom:3px solid var(--ink); aspect-ratio:auto; }
+.hero .frame img{ height:auto; object-fit:contain; object-position:center; }
 .hero-body{ padding:1.1rem 0 1.3rem; display:flex; flex-direction:column; gap:.8rem; }
 .hero h1{ font-size:clamp(1.55rem,6.4vw,2.5rem); letter-spacing:-.01em; }
 .hero h1 .fr{ color:var(--red); }
@@ -160,6 +160,8 @@ a{ color:var(--red-deep); }
 .toyroom{ background:var(--blue); color:#fff; border-bottom:3px solid var(--ink); }
 .toyroom-inner{ padding:1.5rem 0; display:grid; gap:1rem; }
 .toy-kicker{ font-family:var(--f-num); color:var(--yolk); font-size:.78rem; letter-spacing:.12em; }
+.toyroom-art{ border:3px solid var(--ink); background:var(--surface); }
+.toyroom-art img{ width:100%; height:auto; }
 .toyroom h2{ font-size:clamp(1.35rem,5vw,2rem); }
 .toyroom p:not(.toy-kicker){ margin-top:.55rem; max-width:38rem; font-size:.9rem; line-height:1.8; }
 .toy-tags{ display:flex; flex-wrap:wrap; gap:.45rem; }
@@ -241,7 +243,9 @@ a{ color:var(--red-deep); }
 
 @media (min-width:42rem){
   .toyroom-inner{ grid-template-columns:.7fr 2fr; align-items:start; }
-  .toy-tags{ grid-column:2; }
+  .toyroom-art{ grid-column:1 / -1; }
+  .toy-copy{ grid-column:1 / -1; }
+  .toy-tags{ grid-column:1 / -1; }
   .family-specials .dishes{ grid-template-columns:repeat(3,1fr); }
 }
 
@@ -344,6 +348,7 @@ a{ color:var(--red-deep); }
   .btn{ padding:.78rem 2rem; }
   .hero{ display:grid; grid-template-columns:1.15fr 1fr; align-items:stretch; }
   .hero .frame{ border-bottom:0; border-right:3px solid var(--ink); height:100%; aspect-ratio:auto; min-height:22rem; }
+  .hero .frame img{ height:100%; object-fit:cover; object-position:center 47%; }
   .hero-body{ padding:1.6rem 1.6rem 1.7rem; justify-content:center; }
   .hero .factline{ margin-top:.4rem; }
 }
