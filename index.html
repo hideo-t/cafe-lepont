@@ -1,385 +1,511 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ja">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="robots" content="noindex,nofollow"><!-- REVIEW-ONLY: remove this line before public launch -->
-<title>カフェるぽん｜家族で食べて、遊べる白河のカフェ</title>
-<meta name="description" content="福島県白河市のカフェるぽん（Café Le Pont）。カレー、ポテト、フレンチトーストは家族で分けるファミリーサイズ。2階にはフランスのおもちゃで遊べる部屋があります。">
-<link rel="canonical" href="./index.html">
-<meta property="og:type" content="website">
-<meta property="og:title" content="カフェるぽん｜白河のランチとカフェ">
-<meta property="og:description" content="食べて、遊んで、おなかいっぱい。家族で分ける大きな名物と、2階のおもちゃ部屋がある白河のカフェです。">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Café Le Pont（カフェ るぽん）｜福島県白河市 — せいろ蒸しが名物の、まちのカフェ</title>
+<meta name="description" content="福島県白河市のちいさなカフェ Café Le Pont（カフェ るぽん）。名物のせいろ蒸し、手ごねチキンバーガー、手づくりスイーツ。赤いベンチとテラスのある、橋がつなぐまちのカフェ。木〜日・祝のランチタイム営業。Uber Eats 対応。">
+<meta property="og:type" content="restaurant">
+<meta property="og:title" content="Café Le Pont（カフェ るぽん）｜福島県白河市">
+<meta property="og:description" content="せいろ蒸しが名物の、まちのちいさなカフェ。赤いベンチとテラスでお待ちしています。">
+<meta property="og:image" content="assets/img/store/store-exterior-front.jpg">
+<meta property="og:url" content="https://hideo-t.github.io/cafe-lepont/">
+<link rel="canonical" href="https://hideo-t.github.io/cafe-lepont/">
+<meta property="og:locale" content="ja_JP">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Noto+Sans+JP:wght@400;700;900&display=swap">
-<link rel="stylesheet" href="assets/css/style.css">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Noto+Sans+JP:wght@300;400;500;700&family=Noto+Serif+JP:wght@400;500&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="assets/img/logo-180.png">
+<link rel="apple-touch-icon" href="assets/img/logo-180.png">
+<style>
+/* ===== Café Le Pont — real-photo rebuild ===== */
+:root{
+  --grape:#4E1D3C;      /* deep aubergine (dark sections / text accents) */
+  --plum:#7C2E63;       /* brand purple */
+  --orchid:#B45C97;     /* signboard orchid */
+  --pink:#E6197F;       /* bridge rail accent */
+  --wood:#A06A3E;       /* cedar slat */
+  --red:#D5333B;        /* red bench pop */
+  --cream:#FBF7F1;
+  --paper:#F4ECE2;
+  --sand:#EADFD0;
+  --ink:#2D2530;
+  --ink-soft:#5C5260;
+  --muted:#9A8FA0;
+  --line:#E4D8CB;
+  --serif-en:"Cormorant Garamond","Times New Roman",serif;
+  --serif-ja:"Noto Serif JP","Hiragino Mincho ProN","Yu Mincho",serif;
+  --sans:"Noto Sans JP","Hiragino Kaku Gothic ProN","Yu Gothic",sans-serif;
+  --wrap:1140px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;background:var(--cream);color:var(--ink);
+  font-family:var(--sans);font-weight:400;line-height:1.85;
+  -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;
+  overflow-x:hidden;
+}
+img,video{max-width:100%;height:auto;display:block}
+a{color:var(--plum);text-decoration:none}
+h1,h2,h3{line-height:1.35;margin:0;font-weight:500}
+.wrap{width:min(100% - 2.5rem,var(--wrap));margin-inline:auto}
+.narrow{max-width:760px}
+.skip{position:absolute;left:-999px}
+.skip:focus{left:1rem;top:1rem;background:var(--grape);color:#fff;padding:.6rem 1rem;border-radius:6px;z-index:999}
+
+/* ---- buttons ---- */
+.btn{display:inline-flex;align-items:center;gap:.5rem;justify-content:center;
+  padding:.85rem 1.6rem;border-radius:999px;font-weight:500;font-size:.95rem;
+  border:1.5px solid transparent;transition:.25s;cursor:pointer}
+.btn-fill{background:var(--plum);color:#fff;border-color:var(--plum)}
+.btn-fill:hover{background:var(--grape);border-color:var(--grape)}
+.btn-light{background:#fff;color:var(--plum);border-color:#fff}
+.btn-light:hover{background:var(--cream)}
+.btn-outline{background:transparent;color:#fff;border-color:rgba(255,255,255,.55)}
+.btn-outline:hover{border-color:#fff;background:rgba(255,255,255,.1)}
+.btn-ghost{background:transparent;color:var(--plum);border-color:var(--orchid)}
+.btn-ghost:hover{background:var(--plum);color:#fff;border-color:var(--plum)}
+
+/* ---- bridge divider ---- */
+.bridge{display:block;margin:0 auto;color:var(--orchid)}
+
+/* ---- header ---- */
+.site-header{position:sticky;top:0;z-index:100;background:rgba(251,247,241,.92);
+  backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.header-inner{display:flex;align-items:center;justify-content:space-between;gap:1rem;min-height:72px;padding:.4rem 0}
+.brand{display:flex;align-items:center;gap:.6rem}
+.brand img{height:52px;width:auto}
+.brand b{font-family:var(--serif-en);font-weight:500;font-size:1.15rem;color:var(--grape);letter-spacing:.02em;line-height:1}
+.brand span{display:block;font-size:.66rem;letter-spacing:.3em;color:var(--orchid);margin-top:.2rem}
+.site-nav{display:flex;align-items:center;gap:.3rem}
+.site-nav a{padding:.5rem .8rem;color:var(--ink-soft);font-size:.9rem;position:relative}
+.site-nav a:not(.nav-cta):hover{color:var(--plum)}
+.site-nav a:not(.nav-cta)::after{content:"";position:absolute;left:.8rem;right:.8rem;bottom:.35rem;height:1.5px;background:var(--pink);transform:scaleX(0);transform-origin:left;transition:.25s}
+.site-nav a:not(.nav-cta):hover::after{transform:scaleX(1)}
+.nav-cta{display:flex;flex-direction:column;align-items:center;background:var(--plum);color:#fff!important;
+  padding:.45rem 1rem;border-radius:999px;margin-left:.4rem;line-height:1.15}
+.nav-cta:hover{background:var(--grape)}
+.nav-cta b{font-size:.95rem;font-weight:700;letter-spacing:.02em}
+.nav-cta small{font-size:.6rem;letter-spacing:.2em;opacity:.85}
+.nav-toggle{display:none}
+
+/* ---- hero ---- */
+.hero{position:relative;min-height:88vh;display:flex;align-items:center;justify-content:center;text-align:center;color:#fff;overflow:hidden}
+.hero-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 60%}
+.hero::after{content:"";position:absolute;inset:0;
+  background:linear-gradient(180deg,rgba(40,16,32,.55) 0%,rgba(62,20,48,.45) 45%,rgba(40,16,32,.72) 100%)}
+.hero-inner{position:relative;z-index:2;padding:5rem 1.25rem}
+.hero-kicker{font-size:.95rem;letter-spacing:.14em;margin:0 0 1.6rem;text-shadow:0 1px 10px rgba(0,0,0,.4)}
+.hero-kicker span{display:inline-block;margin-top:.3rem;font-size:1.05rem}
+.hero-logo{margin:0 auto;max-width:min(380px,64vw)}
+.hero-logo img{display:block;width:100%;height:auto;filter:drop-shadow(0 4px 18px rgba(0,0,0,.35))}
+.hero-depuis{font-family:var(--serif-en);letter-spacing:.35em;font-size:.8rem;margin:1.6rem 0 1rem;display:flex;gap:1rem;align-items:center;justify-content:center;opacity:.9}
+.hero-depuis::before,.hero-depuis::after{content:"";width:40px;height:1px;background:rgba(255,255,255,.6)}
+.hero-fr{font-family:var(--serif-en);font-style:italic;font-size:1.15rem;margin:.2rem 0 .1rem;opacity:.95}
+.hero-ja{font-family:var(--serif-ja);font-size:.95rem;margin:.1rem 0 2rem;opacity:.92}
+.hero-actions{display:flex;gap:.8rem;justify-content:center;flex-wrap:wrap}
+.hero-facts{position:absolute;z-index:2;left:0;right:0;bottom:0;margin:0;
+  display:flex;flex-wrap:wrap;justify-content:center;gap:0;
+  background:rgba(40,14,30,.55);backdrop-filter:blur(6px);border-top:1px solid rgba(255,255,255,.14)}
+.hero-facts>div{flex:1 1 auto;min-width:150px;padding:.9rem 1.2rem;text-align:center;border-left:1px solid rgba(255,255,255,.12)}
+.hero-facts>div:first-child{border-left:none}
+.hero-facts dt{font-size:.62rem;letter-spacing:.24em;color:var(--orchid);text-transform:uppercase}
+.hero-facts dd{margin:.25rem 0 0;font-size:.9rem;color:#fff}
+
+/* ---- section scaffolding ---- */
+.section{padding:5.5rem 0}
+.section-head{text-align:center;margin-bottom:3rem}
+.section-label{font-family:var(--serif-en);letter-spacing:.3em;text-transform:uppercase;font-size:.78rem;color:var(--orchid);margin:0 0 .6rem}
+.section-title{font-family:var(--serif-ja);font-size:clamp(1.5rem,4.5vw,2.1rem);color:var(--grape)}
+.section-sub{font-family:var(--serif-en);font-style:italic;color:var(--muted);margin:.4rem 0 0}
+
+/* ---- about ---- */
+.about{background:linear-gradient(180deg,var(--cream),var(--paper))}
+.about-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:3rem;align-items:center}
+.about-text .drop{font-family:var(--serif-ja);font-size:1.25rem;color:var(--plum);margin:0 0 1rem}
+.about-text p{margin:0 0 1rem;color:var(--ink-soft)}
+.about-text em{font-family:var(--serif-en);font-style:italic;color:var(--plum)}
+.about-photo{position:relative}
+.about-photo img{border-radius:10px;box-shadow:0 18px 40px -18px rgba(78,29,60,.5);aspect-ratio:4/3;object-fit:cover;width:100%}
+.about-photo figcaption{position:absolute;left:1rem;bottom:1rem;background:rgba(124,46,99,.9);color:#fff;font-size:.72rem;letter-spacing:.1em;padding:.35rem .8rem;border-radius:999px}
+.pillars{list-style:none;margin:3rem 0 0;padding:0;display:grid;grid-template-columns:repeat(4,1fr);gap:1.2rem}
+.pillars li{background:#fff;border:1px solid var(--line);border-radius:12px;padding:1.5rem 1.2rem;text-align:center}
+.pillars .ic{width:46px;height:46px;margin:0 auto .8rem;color:var(--plum)}
+.pillars h3{font-size:1rem;color:var(--grape);margin-bottom:.4rem}
+.pillars p{font-size:.84rem;color:var(--ink-soft);margin:0;line-height:1.7}
+
+/* ---- gallery (interior / terrace) ---- */
+.band-interior{background:var(--cream)}
+.band-terrace{background:linear-gradient(180deg,var(--grape),#3a1430);color:#fff}
+.band-terrace .section-title{color:#fff}
+.band-terrace .section-sub{color:var(--orchid)}
+.gal{display:grid;gap:1rem}
+.gal-interior{grid-template-columns:2fr 1fr 1fr;grid-auto-rows:220px}
+.gal-interior li{list-style:none;overflow:hidden;border-radius:10px}
+.gal-interior li:first-child{grid-row:span 2;grid-column:span 1}
+.gal-interior img{width:100%;height:100%;object-fit:cover;transition:.5s}
+.gal-interior li:hover img{transform:scale(1.05)}
+.terrace-layout{display:grid;grid-template-columns:1fr 1fr;gap:2.5rem;align-items:center}
+.terrace-bench{position:relative;border-radius:12px;overflow:hidden;box-shadow:0 20px 50px -20px rgba(0,0,0,.6)}
+.terrace-bench img{width:100%;aspect-ratio:3/4;object-fit:cover}
+.terrace-copy p{color:rgba(255,255,255,.85)}
+.terrace-copy .big{font-family:var(--serif-ja);font-size:1.4rem;color:#fff;margin:0 0 1rem}
+.terrace-mini{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-top:1.5rem}
+.terrace-mini img{border-radius:10px;aspect-ratio:3/4;object-fit:cover}
+
+/* ---- menu ---- */
+.menu{background:var(--paper)}
+.menu-note{text-align:center;color:var(--ink-soft);font-size:.9rem;margin:-1.5rem auto 2.5rem;max-width:620px}
+.menu-signature{display:grid;grid-template-columns:1fr 1fr;gap:0;border-radius:14px;overflow:hidden;
+  box-shadow:0 20px 50px -24px rgba(78,29,60,.45);background:#fff;margin-bottom:2.5rem}
+.menu-signature img{width:100%;height:100%;object-fit:cover;min-height:320px}
+.menu-signature .txt{padding:2.5rem;display:flex;flex-direction:column;justify-content:center}
+.menu-signature .tag{font-family:var(--serif-en);font-style:italic;color:var(--pink);margin:0 0 .5rem}
+.menu-signature h3{font-family:var(--serif-ja);font-size:1.6rem;color:var(--grape);margin:0 0 .9rem}
+.menu-signature p{color:var(--ink-soft);margin:0}
+.menu-grid{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,1fr);gap:1.6rem}
+.menu-grid li{background:#fff;border-radius:12px;overflow:hidden;border:1px solid var(--line);transition:.3s}
+.menu-grid li:hover{transform:translateY(-4px);box-shadow:0 16px 36px -18px rgba(78,29,60,.4)}
+.menu-grid figure{margin:0;overflow:hidden;aspect-ratio:4/3}
+.menu-grid img{width:100%;height:100%;object-fit:cover;transition:.5s}
+.menu-grid li:hover img{transform:scale(1.06)}
+.menu-grid .body{padding:1.1rem 1.25rem 1.4rem}
+.menu-grid h3{font-size:1.05rem;color:var(--grape);margin-bottom:.35rem}
+.menu-grid p{font-size:.84rem;color:var(--ink-soft);margin:0;line-height:1.7}
+.menu-grid .price{display:inline-block;margin-top:.6rem;font-weight:700;color:var(--plum)}
+.menu-foot{text-align:center;margin-top:2.5rem;color:var(--ink-soft);font-size:.9rem}
+.menu-foot .pills{display:flex;gap:.6rem;flex-wrap:wrap;justify-content:center;margin-bottom:1.2rem}
+.menu-foot .pills span{background:#fff;border:1px solid var(--line);border-radius:999px;padding:.4rem 1rem;font-size:.82rem;color:var(--ink-soft)}
+
+/* ---- access ---- */
+.access-grid{display:grid;grid-template-columns:1fr 1fr;gap:2.5rem;align-items:stretch}
+.access-photo{border-radius:12px;overflow:hidden;box-shadow:0 18px 40px -20px rgba(78,29,60,.4)}
+.access-photo img{width:100%;height:100%;object-fit:cover;min-height:280px}
+.info-table{width:100%;border-collapse:collapse;margin-bottom:1.5rem}
+.info-table th,.info-table td{text-align:left;padding:.75rem .5rem;border-bottom:1px solid var(--line);font-size:.9rem;vertical-align:top}
+.info-table th{width:7.5em;color:var(--plum);font-weight:500}
+.map{border-radius:12px;overflow:hidden;border:1px solid var(--line);margin-top:1.2rem}
+.map iframe{width:100%;height:300px;border:0;display:block}
+
+/* ---- cta ---- */
+.cta{background:linear-gradient(135deg,var(--plum),var(--grape));color:#fff;text-align:center;padding:5rem 0}
+.cta .fr{font-family:var(--serif-en);font-style:italic;color:var(--orchid);margin:0 0 .6rem}
+.cta h2{font-family:var(--serif-ja);font-size:clamp(1.4rem,4vw,1.9rem);margin:0 0 1rem}
+.cta p{color:rgba(255,255,255,.85);margin:0 auto 2rem;max-width:560px}
+
+/* ---- footer ---- */
+.site-footer{background:#2a1020;color:rgba(255,255,255,.7);padding:3rem 0 5.5rem;text-align:center}
+.site-footer img{height:70px;width:auto;margin:0 auto 1rem}
+.footer-nav{display:flex;gap:1.2rem;justify-content:center;flex-wrap:wrap;margin:1.4rem 0}
+.footer-nav a{color:rgba(255,255,255,.7);font-size:.85rem}
+.footer-nav a:hover{color:#fff}
+.footer-tag{font-family:var(--serif-ja);font-size:.82rem;color:var(--orchid);margin-top:1rem}
+
+/* ---- mobile call bar ---- */
+.callbar{position:fixed;left:0;right:0;bottom:0;z-index:90;display:none;
+  grid-template-columns:1fr 1fr;background:#fff;border-top:1px solid var(--line);
+  padding-bottom:env(safe-area-inset-bottom)}
+.callbar a{display:flex;align-items:center;justify-content:center;gap:.5rem;padding:.9rem;font-size:.9rem;font-weight:500}
+.callbar svg{width:20px;height:20px}
+.callbar .cb-tel{color:var(--plum)}
+.callbar .cb-ig{color:#fff;background:linear-gradient(135deg,var(--plum),var(--pink))}
+
+/* ---- responsive ---- */
+@media(max-width:900px){
+  .about-grid,.terrace-layout,.menu-signature,.access-grid{grid-template-columns:1fr}
+  .pillars{grid-template-columns:1fr 1fr}
+  .menu-grid{grid-template-columns:1fr 1fr}
+  .gal-interior{grid-template-columns:1fr 1fr;grid-auto-rows:160px}
+  .gal-interior li:first-child{grid-column:span 2;grid-row:span 1;aspect-ratio:16/9}
+  .menu-signature img{min-height:260px}
+}
+@media(max-width:640px){
+  .section{padding:3.5rem 0}
+  .site-nav{position:fixed;inset:0 0 0 auto;width:min(80vw,300px);background:var(--cream);
+    flex-direction:column;align-items:stretch;padding:5rem 1.5rem 2rem;gap:.2rem;
+    transform:translateX(100%);transition:.3s;box-shadow:-10px 0 40px -20px rgba(0,0,0,.4)}
+  .site-nav a{padding:.9rem .5rem;border-bottom:1px solid var(--line)}
+  .nav-cta{flex-direction:row;gap:.5rem;justify-content:center;margin:.8rem 0 0}
+  #navchk:checked ~ .header-inner .site-nav{transform:translateX(0)}
+  .nav-toggle{display:flex;flex-direction:column;gap:5px;width:30px;cursor:pointer;z-index:120;background:none;border:0;padding:4px}
+  .nav-toggle span{height:2px;background:var(--grape);border-radius:2px;transition:.3s}
+  #navchk:checked ~ .header-inner .nav-toggle span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+  #navchk:checked ~ .header-inner .nav-toggle span:nth-child(2){opacity:0}
+  #navchk:checked ~ .header-inner .nav-toggle span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+  .menu-grid{grid-template-columns:1fr}
+  .pillars{grid-template-columns:1fr}
+  .terrace-bench img{aspect-ratio:4/3}
+  .hero{flex-direction:column;justify-content:center}
+  .hero-inner{padding:3.2rem 1.25rem 2rem}
+  .hero-facts{position:static;margin-top:.5rem}
+  .hero-facts>div{min-width:50%}
+  .callbar{display:grid}
+  .site-footer{padding-bottom:6rem}
+}
+</style>
 </head>
 <body>
 
-<!-- ★公開前に削除：制作中バー（全5ページに入っています） -->
-<div class="wip"><div class="wrap">
-  <b>制作中</b><span>赤枠の値（★）は未確定です。写真はすべて仮です。SETUP.md をご確認ください。</span>
-</div></div>
+<a class="skip" href="#main">本文へスキップ</a>
 
-<div class="hours-bar"><div class="wrap">
-  <span>営業日　木・金・土・日</span>
-  <span class="num">11:00 – 15:00</span>
-</div></div>
+<header class="site-header" id="top">
+  <input type="checkbox" id="navchk" hidden>
+  <div class="wrap header-inner">
+    <a class="brand" href="#top" aria-label="Café Le Pont（カフェ るぽん）ホーム">
+      <img src="assets/img/logo-color.png" alt="Café Le Pont（カフェ るぽん）">
+    </a>
+    <label for="navchk" class="nav-toggle" aria-label="メニューを開く"><span></span><span></span><span></span></label>
+    <nav class="site-nav" aria-label="メインメニュー">
+      <a href="#about">お店について</a>
+      <a href="#interior">店内</a>
+      <a href="#terrace">テラス・ベンチ</a>
+      <a href="#menu">メニュー</a>
+      <a href="#access">アクセス</a>
+      <a class="nav-cta" href="tel:09042567353"><b>090-4256-7353</b><small>ご予約・お問い合わせ</small></a>
+    </nav>
+  </div>
+</header>
 
-<header class="site-hd"><div class="wrap">
-  <a class="brand" href="index.html">
-    <img class="brand-logo" src="assets/img/logo-lepont-bridge.webp" alt="カフェるぽん — 動物たちが橋を渡るロゴ" width="518" height="520">
-    <span class="brand-copy"><span class="jp">カフェるぽん</span><span class="fr">CAFÉ LE PONT</span></span>
-  </a>
-  <nav class="nav" aria-label="メインメニュー">
-    <a href="index.html" aria-current="page">ホーム</a>
-    <a href="menu.html">メニュー</a>
-    <a href="access.html">店舗案内・アクセス</a>
-    <a href="sakiori.html">裂き織り</a>
-    <a href="news.html">お知らせ</a>
-  </nav>
-</div></header>
+<main id="main">
 
-<main>
-
-  <!-- ============ 1. ファーストビュー ============ -->
+  <!-- ============ HERO ============ -->
   <section class="hero">
-    <!-- ★写真差し替え：src を撮影データに変えるだけ。比率は CSS で固定済み -->
-    <div class="frame frame-4x3">
-      <img src="assets/img/hero-french-toast.webp" alt="フランス国旗を背景にした、家族で分けて楽しむ山盛りのフレンチトースト" width="1050" height="1400" fetchpriority="high">
+    <img class="hero-bg" src="assets/img/store/store-exterior-front.jpg" alt="" aria-hidden="true">
+    <div class="hero-inner">
+      <p class="hero-kicker">橋がつなぐ、まちのカフェ。<br><span>福島県白河市のちいさなお店</span></p>
+      <h1 class="hero-logo"><img src="assets/img/logo-white.png" alt="Café Le Pont（カフェ るぽん）" width="1463" height="938"></h1>
+      <p class="hero-depuis">LE PONT</p>
+      <p class="hero-fr"><em>Un petit pont dans le quartier.</em></p>
+      <p class="hero-ja">赤いベンチと、せいろの湯気と。きょうも、まちのまんなかで。</p>
+      <div class="hero-actions">
+        <a class="btn btn-light" href="#menu">メニューを見る</a>
+        <a class="btn btn-outline" href="https://www.instagram.com/rupon_208/" target="_blank" rel="noopener">Instagram</a>
+      </div>
     </div>
-    <div class="hero-body wrap">
-      <div class="hero-toy-banner" aria-hidden="true">
-        <video autoplay muted loop playsinline preload="auto" poster="assets/img/french-toy-parade.webp" disablepictureinpicture>
-          <source src="assets/video/toy-parade-loop.mp4" type="video/mp4">
-        </video>
+    <dl class="hero-facts">
+      <div><dt>Open</dt><dd>木・金・土・日・祝</dd></div>
+      <div><dt>Hours</dt><dd>11:00 – 15:00</dd></div>
+      <div><dt>Parking</dt><dd>駐車場あり</dd></div>
+      <div><dt>Delivery</dt><dd>Uber Eats 対応</dd></div>
+    </dl>
+  </section>
+
+  <!-- ============ ABOUT ============ -->
+  <section class="section about" id="about">
+    <div class="wrap">
+      <div class="about-grid">
+        <div class="about-text">
+          <p class="section-label">About</p>
+          <h2 class="section-title" style="text-align:left;margin-bottom:1.2rem">橋がつなぐ、まちのカフェ</h2>
+          <p class="drop">フランス語で「橋」を意味する&nbsp;<em>le&nbsp;pont</em>。</p>
+          <p>人と人、世代と世代をつなぐ橋のような場所でありたい。そんな想いを、ピンクの欄干の橋のロゴに込めました。福島県白河市の、気軽に立ち寄れるちいさなカフェです。</p>
+          <p>名物は、ふっくら蒸し上げる<strong>せいろ蒸し</strong>。手ごねのチキンバーガーや、手づくりのスイーツも。明るいランチタイムに、ゆっくりとお過ごしください。</p>
+          <p>店先には、写真を撮りたくなる<strong>赤いベンチ</strong>。晴れた日はテラス席もどうぞ。</p>
+        </div>
+        <figure class="about-photo">
+          <img src="assets/img/store/store-window.jpg" alt="窓ガラスに描かれた Le Pont の白いロゴと、ガラス越しのテラス席" width="1477" height="1108" loading="lazy">
+          <figcaption>窓に咲く、白いロゴ</figcaption>
+        </figure>
       </div>
-      <h1>子どもが騒いでも、<br><span class="fr">大丈夫。</span></h1>
-      <p class="lede">食べて、遊んで、おなかいっぱい。<br>親も少しだけ、ゆっくりできるカフェです。</p>
-      <div class="btns">
-        <a class="btn btn-primary" href="menu.html">メニューを見る</a>
-        <a class="btn btn-ghost" href="access.html">地図を見る</a>
-      </div>
-      <p class="factline">
-        <span>定休　月・火・水</span>
-        <span class="num">駐車場 8台</span>
-      </p>
+
+      <ul class="pillars">
+        <li>
+          <svg class="ic" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 27 C 15 11, 25 11, 35 27" stroke-linecap="round"/><g stroke-linecap="round"><line x1="5" y1="27" x2="5" y2="32"/><line x1="14" y1="16" x2="14" y2="27"/><line x1="20" y1="14" x2="20" y2="27"/><line x1="26" y1="16" x2="26" y2="27"/><line x1="35" y1="27" x2="35" y2="32"/></g></svg>
+          <h3>橋のロゴ</h3><p>ピンクの欄干がかわいい、まちのシンボル。</p>
+        </li>
+        <li>
+          <svg class="ic" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.6"><ellipse cx="20" cy="24" rx="13" ry="5"/><path d="M9 24c0-5 5-9 11-9s11 4 11 9" /><path d="M14 13c0-2 1.5-3.5 3.5-3.5M20 12c0-2 1.5-3.5 3.5-3.5" stroke-linecap="round"/></svg>
+          <h3>名物せいろ蒸し</h3><p>湯気とともに、ふっくら。からだにやさしい一皿。</p>
+        </li>
+        <li>
+          <svg class="ic" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="7" y="20" width="26" height="12" rx="1.5"/><line x1="7" y1="25" x2="33" y2="25"/><line x1="11" y1="32" x2="11" y2="36" stroke-linecap="round"/><line x1="29" y1="32" x2="29" y2="36" stroke-linecap="round"/><path d="M9 20v-3M31 20v-3" stroke-linecap="round"/></svg>
+          <h3>赤いベンチ</h3><p>ストリングライトの下、写真映えのフォトスポット。</p>
+        </li>
+        <li>
+          <svg class="ic" viewBox="0 0 40 40" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="20" cy="20" r="13"/><path d="M20 12v8l6 4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <h3>お昼にゆっくり</h3><p>木〜日・祝のランチタイム営業。駐車場・Uber Eats も。</p>
+        </li>
+      </ul>
     </div>
   </section>
 
-  <section class="toyroom"><div class="wrap toyroom-inner">
-    <p class="toy-kicker">2F / LA CHAMBRE DES JOUETS</p>
-    <div class="toyroom-art">
-      <img src="assets/img/french-toy-parade.webp" alt="動物や子どもたちが自転車で走る、フランス玩具のような町のイラスト" width="1600" height="633" loading="lazy">
-    </div>
-    <div class="toy-copy">
-      <h2>ごはんのあとは、<br>フランスのおもちゃ部屋へ。</h2>
-      <p>DJECO（ジェコ）のパズルや木のおもちゃ、オルゴール。眺めるだけでなく、家族で触って遊べる場所を少しずつ育てています。</p>
-    </div>
-    <ul class="toy-tags" aria-label="おもちゃの種類">
-      <li>PUZZLE</li><li>WOOD TOY</li><li>MUSIC BOX</li>
-    </ul>
-  </div></section>
-
-  <!-- ============ 2. どんな店か ============ -->
-  <section class="sec"><div class="wrap">
-    <div class="sec-hd">
-      <h2>どんな店か</h2>
-      <span class="sub">家族のお昼を、もっと気楽に</span>
-    </div>
-    <div class="points">
-
-      <div class="point">
-        <svg viewBox="0 0 48 48" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="3">
-          <path d="M6 26h36a18 18 0 0 1-36 0z"/>
-          <path d="M14 26c2-7 5-10 10-10s8 3 10 10"/>
-          <path d="M4 40h40"/>
-        </svg>
-        <h3>ぜんぶファミリーサイズ</h3>
-        <p>カレーも、ポテトも、フレンチトーストも。みんなで分けてどうぞ。</p>
-      </div>
-
-      <div class="point">
-        <svg viewBox="0 0 48 48" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="3">
-          <circle cx="24" cy="24" r="17"/>
-          <path d="M17 18h14M17 27h14M24 18v18"/>
-        </svg>
-        <h3>子どもの声も大歓迎</h3>
-        <p>静かにさせなきゃ、と気を張らなくて大丈夫です。</p>
-      </div>
-
-      <div class="point">
-        <svg viewBox="0 0 48 48" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="3">
-          <rect x="8" y="24" width="32" height="9"/>
-          <rect x="8" y="33" width="32" height="9"/>
-          <path d="M18 17c0-3 3-3 3-6M27 17c0-3 3-3 3-6"/>
-        </svg>
-        <h3>地元野菜のせいろ蒸し</h3>
-        <p>化学調味料は使っていません。白河市内では他にありません。</p>
-      </div>
-
-      <div class="point">
-        <svg viewBox="0 0 48 48" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="3">
-          <circle cx="24" cy="24" r="17"/>
-          <path d="M24 14v10l7 5"/>
-        </svg>
-        <h3>2階はおもちゃ部屋</h3>
-        <p>フランスのおもちゃを囲んで、親も子どももひと休み。</p>
-      </div>
-
-    </div>
-  </div></section>
-
-  <!-- ============ 3. 団体でのご利用 ============ -->
-  <section class="sec"><div class="wrap">
-    <div class="sec-hd">
-      <h2>団体でのご利用</h2>
-      <span class="sub">15名さままで</span>
-    </div>
-    <div class="standing">
-      <p class="sec-note"><b>15名さままで、ご予約を承ります。</b>前日までにお電話ください。</p>
-      <p class="sec-note">ご予約は電話のみです。駐車場は8台ですので、お車が多くなりそうなときは、そのときにお知らせください。</p>
-      <a class="btn btn-primary" href="tel:0248000000">電話で予約する</a>
-    </div>
-  </div></section>
-
-  <!-- ============ 4. 価格帯（最重要） ============ -->
-  <section class="sec"><div class="wrap">
-    <div class="sec-hd">
-      <h2>いくらぐらい？</h2>
-      <span class="sub">思っているより、安いはずです</span>
-    </div>
-    <div class="pricebar">
-      <p class="kicker">ランチ</p>
-      <p class="amount">
-        <!-- ★最重要：最安メニューの実額に差し替える -->
-        <span class="n todo">●●●</span><span class="yen">円</span><span class="kara">から</span>
-      </p>
-      <p class="say">ごはん・汁物つき。おかわりの相談もどうぞ。</p>
-      <ul>
-        <li>大盛り<span class="todo">★</span></li>
-        <li>学生割<span class="todo">★</span></li>
-        <li>現金のほか<span class="todo">★支払方法</span></li>
+  <!-- ============ INTERIOR ============ -->
+  <section class="section band-interior" id="interior">
+    <div class="wrap">
+      <header class="section-head">
+        <p class="section-label">Interior</p>
+        <h2 class="section-title">こぢんまり、あたたかい店内</h2>
+        <p class="section-sub">Un intérieur chaleureux</p>
+      </header>
+      <ul class="gal gal-interior">
+        <li><img src="assets/img/store/store-interior-1.jpg" alt="窓際のテーブル席。グレーの椅子にニットのクッション" width="1477" height="1108" loading="lazy"></li>
+        <li><img src="assets/img/store/store-interior-2.jpg" alt="木のテーブルが並ぶ、明るい店内" width="1477" height="1108" loading="lazy"></li>
+        <li><img src="assets/img/store/store-interior-3.jpg" alt="やわらかな光がさしこむ店内の様子" width="1477" height="1108" loading="lazy"></li>
+        <li><img src="assets/img/store/store-interior-4.jpg" alt="ゆったりくつろげる店内の席" width="1477" height="1108" loading="lazy"></li>
+        <li><img src="assets/img/store/store-interior-5.jpg" alt="カウンターまわりの様子" width="1477" height="1108" loading="lazy"></li>
       </ul>
     </div>
-    <p class="sec-note sec-more">
-      表示はすべて税込です。全品の価格は<a href="menu.html">メニューページ</a>に載せています。
-    </p>
-  </div></section>
+  </section>
 
-  <!-- ============ 5. メニュー抜粋 ============ -->
-  <section class="sec"><div class="wrap">
-    <div class="sec-hd">
-      <h2>メニュー</h2>
-      <span class="sub">家族で笑って分ける、三大名物</span>
-    </div>
-    <div class="dishes">
-
-      <article class="dish">
-        <div class="frame frame-4x3">
-          <img src="assets/img/family-curry.webp" alt="ひよこの形をしたごはんがのるファミリーサイズカレー" width="1100" height="1100" loading="lazy">
+  <!-- ============ TERRACE / RED BENCH ============ -->
+  <section class="section band-terrace" id="terrace">
+    <div class="wrap">
+      <header class="section-head">
+        <p class="section-label">Terrace &amp; Bench</p>
+        <h2 class="section-title">赤いベンチと、テラス</h2>
+        <p class="section-sub">Le banc rouge</p>
+      </header>
+      <div class="terrace-layout">
+        <figure class="terrace-bench">
+          <img src="assets/img/store/store-bench-1.jpg" alt="ウッドの壁とストリングライトを背にした、真っ赤なベンチ" width="1108" height="1477" loading="lazy">
+        </figure>
+        <div class="terrace-copy">
+          <p class="big">「ここで一枚、どうぞ。」</p>
+          <p>ウッドの壁と、連なるストリングライト。その前に置かれた、真っ赤なベンチ。カフェ るぽんの、いちばんの撮影スポットです。</p>
+          <p>晴れた日は、駐車場横のテラス席も。お子さま連れでも、おひとりでも、気兼ねなくお過ごしください。</p>
+          <div class="terrace-mini">
+            <img src="assets/img/store/store-bench-2.jpg" alt="赤いベンチとグリーン" width="1108" height="1477" loading="lazy">
+            <img src="assets/img/store/store-entrance.jpg" alt="ウッド格子の入口とガラス扉" width="1108" height="1477" loading="lazy">
+          </div>
         </div>
-        <div class="body">
-          <h3>ひよこのファミリーカレー</h3>
-          <span class="tag">FAMILY SIZE</span>
-          <p class="desc">大きなひよこを囲んで、みんなで取り分けるカレーです。</p>
-          <p class="price"><span class="n todo">●●●</span><span class="yen">円</span></p>
-        </div>
-      </article>
-
-      <article class="dish">
-        <div class="frame frame-4x3">
-          <img src="assets/img/family-fries.webp" alt="家族で分ける山盛りのフライドポテト" width="1100" height="1100" loading="lazy">
-        </div>
-        <div class="body">
-          <h3>山盛りファミリーポテト</h3>
-          <span class="tag">FAMILY SIZE</span>
-          <p class="desc">手が止まらないポテトを、テーブルいっぱいに。</p>
-          <p class="price"><span class="n todo">●●●</span><span class="yen">円</span></p>
-        </div>
-      </article>
-
-      <article class="dish">
-        <div class="frame frame-4x3">
-          <img src="assets/img/family-french-toast.webp" alt="家族で分けるタワーのようなフレンチトースト" width="1100" height="1100" loading="lazy">
-        </div>
-        <div class="body">
-          <h3>タワー・フレンチトースト</h3>
-          <span class="tag">FAMILY SIZE</span>
-          <p class="desc">厚切りを積み上げた、食後まで楽しい一皿です。</p>
-          <p class="price"><span class="n todo">●●●</span><span class="yen">円</span></p>
-        </div>
-      </article>
-
-      <article class="dish">
-        <div class="frame frame-4x3">
-          <img src="assets/img/_placeholder.svg" alt="" width="400" height="300" loading="lazy">
-          <span class="frame-note">★写真</span>
-        </div>
-        <div class="body">
-          <h3 class="todo">★学生セット</h3>
-          <span class="tag">学生さん</span>
-          <p class="desc">学生証の提示は不要です。</p>
-          <p class="price"><span class="n todo">●●●</span><span class="yen">円</span></p>
-        </div>
-      </article>
-
-      <article class="dish">
-        <div class="frame frame-4x3">
-          <img src="assets/img/_placeholder.svg" alt="" width="400" height="300" loading="lazy">
-          <span class="frame-note">★写真</span>
-        </div>
-        <div class="body">
-          <h3 class="todo">★お子さまプレート</h3>
-          <p class="desc">小さいお子さん向けの量で。</p>
-          <p class="price"><span class="n todo">●●●</span><span class="yen">円</span></p>
-        </div>
-      </article>
-
-      <article class="dish">
-        <div class="frame frame-4x3">
-          <img src="assets/img/_placeholder.svg" alt="" width="400" height="300" loading="lazy">
-          <span class="frame-note">★写真</span>
-        </div>
-        <div class="body">
-          <h3 class="todo">★コーヒー</h3>
-          <p class="desc">食後に。お食事なしのご利用もできます。</p>
-          <p class="price"><span class="n todo">●●●</span><span class="yen">円</span></p>
-        </div>
-      </article>
-
-    </div>
-    <p class="sec-more"><a class="btn btn-ghost" href="menu.html">メニューを全部見る</a></p>
-  </div></section>
-
-  <!-- ============ 6. アクセス ============ -->
-  <section class="sec"><div class="wrap">
-    <div class="sec-hd">
-      <h2>行き方</h2>
-      <span class="sub">国道294号から入れます</span>
-    </div>
-
-    <!-- ★工事が終わったら、この .alert ブロックごと削除してください -->
-    <div class="alert">
-      <b>周辺が道路工事中です</b>
-      <p>国道294号から入る<b>新しい道</b>が使えます。下の図の道順でお越しください。分かりにくいときはお電話ください、ご案内します。</p>
-    </div>
-
-    <figure class="routefig">
-      <div class="scroll">
-        <img src="assets/img/route.svg" alt="国道294号から新道に入り、一方通行を経てカフェるぽんに至る道順の図。駐車場は8台。" width="720" height="380" loading="lazy">
       </div>
-      <figcaption>★交差点名・所要時間・曲がる回数は未確定です。図は <code>assets/img/route.svg</code> の1ファイルを直せば全ページ更新されます。</figcaption>
-    </figure>
-
-    <div class="mapbox">
-      <iframe src="https://www.google.com/maps?q=福島県白河市向新蔵50&hl=ja&z=17&output=embed"
-              title="カフェるぽんの地図" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     </div>
+  </section>
 
-    <dl class="infotable">
-      <div><dt>住所</dt><dd>福島県白河市向新蔵50</dd></div>
-      <div><dt>駐車場</dt><dd>8台（無料）</dd></div>
-      <div><dt>営業時間</dt><dd><span class="num">11:00 – 15:00</span></dd></div>
-      <div><dt>定休日</dt><dd>月曜・火曜・水曜</dd></div>
-    </dl>
+  <!-- ============ MENU ============ -->
+  <section class="section menu" id="menu">
+    <div class="wrap">
+      <header class="section-head">
+        <p class="section-label">Menu</p>
+        <h2 class="section-title">るぽんのお食事</h2>
+        <p class="section-sub">À table</p>
+      </header>
+      <p class="menu-note">仕入れによって内容が変わります。最新のメニューは <a href="https://www.instagram.com/rupon_208/" target="_blank" rel="noopener">Instagram @rupon_208</a> をご覧ください。</p>
 
-    <p class="sec-more"><a class="btn btn-ghost" href="access.html">店舗案内をくわしく見る</a></p>
-  </div></section>
+      <div class="menu-signature">
+        <img src="assets/photos/food/food-01.jpg" alt="せいろで蒸し上げたパンと彩り温野菜、ヨーグルトを添えたせいろ蒸しセット" width="1100" height="825" loading="lazy">
+        <div class="txt">
+          <p class="tag">Signature</p>
+          <h3>せいろ蒸しセット</h3>
+          <p>ふっくら蒸したパンと、彩り豊かな温野菜。やさしいスープと、ヨーグルトやデザートを添えて。湯気の立つ蒸籠のまま、あたたかいうちにどうぞ。るぽんの看板メニューです。</p>
+        </div>
+      </div>
 
-  <!-- ============ 7. 裂き織り ============ -->
-  <section class="sec"><div class="wrap">
-    <div class="sec-hd">
-      <h2>裂き織りのバッグ</h2>
-      <span class="sub">隣の棟の工房から</span>
+      <ul class="menu-grid">
+        <li>
+          <figure><img src="assets/photos/food/food-02.jpg" alt="イングリッシュマフィンにチキンパティとチーズをはさんだ手ごねチキンバーガー" width="892" height="669" loading="lazy"></figure>
+          <div class="body"><h3>手ごねチキンバーガー</h3><p>マフィンに、手ごねのチキンパティとチーズ。温野菜とスープを添えて、しっかりランチに。</p></div>
+        </li>
+        <li>
+          <figure><img src="assets/photos/food/food-08.jpg" alt="せいろで蒸したトーストと温野菜" width="892" height="669" loading="lazy"></figure>
+          <div class="body"><h3>せいろのトーストセット</h3><p>厚切りトーストを蒸籠でふっくら。温野菜とともに、やさしい口あたりに。</p></div>
+        </li>
+        <li>
+          <figure><img src="assets/photos/food/food-10.jpg" alt="ソーセージとピーマン入りのナポリタンと温野菜" width="892" height="669" loading="lazy"></figure>
+          <div class="body"><h3>ナポリタン</h3><p>昔ながらの味つけで仕上げる定番パスタ。温野菜とスープのセットで。</p></div>
+        </li>
+        <li>
+          <figure><img src="assets/photos/food/food-15.jpg" alt="千切りキャベツを添えたジューシーな唐揚げ" width="892" height="669" loading="lazy"></figure>
+          <div class="body"><h3>唐揚げ</h3><p>外はカリッと、中はジューシー。千切りキャベツを添えた人気の一品。</p></div>
+        </li>
+        <li>
+          <figure><img src="assets/photos/food/food-22.jpg" alt="レタスを添えた蒸したて小籠包" width="892" height="669" loading="lazy"></figure>
+          <div class="body"><h3>蒸し小籠包</h3><p>蒸籠で仕上げる、あつあつの小籠包。あと一品ほしいときに。</p></div>
+        </li>
+        <li>
+          <figure><img src="assets/photos/food/food-05.jpg" alt="粉糖をふったガトーショコラとシフォンケーキにアイスを添えたスイーツ" width="892" height="669" loading="lazy"></figure>
+          <div class="body"><h3>手づくりスイーツ</h3><p>ガトーショコラやシフォンケーキを、アイスとともに。日替わりでご用意。</p></div>
+        </li>
+      </ul>
+
+      <div class="menu-foot">
+        <div class="pills">
+          <span>こだわりのコーヒー・紅茶</span>
+          <span>お子さまメニューあり</span>
+          <span>Uber Eats でおうちでも</span>
+        </div>
+        <p>ランチタイム 11:00–15:00（木・金・土・日・祝）</p>
+      </div>
     </div>
-    <p class="sec-note">
-      店のすぐ隣、同じ敷地の工房で作っている裂き織りのバッグを置いています。
-      古い布を裂いて織り直すので、<b>同じ柄は二つとありません</b>。店内でご覧いただけます。
-    </p>
-    <p class="sec-more"><a class="btn btn-ghost" href="sakiori.html">裂き織りを見る</a></p>
-  </div></section>
+  </section>
+
+  <!-- ============ ACCESS ============ -->
+  <section class="section access" id="access">
+    <div class="wrap">
+      <header class="section-head">
+        <p class="section-label">Access &amp; Info</p>
+        <h2 class="section-title">アクセス・店舗情報</h2>
+        <p class="section-sub">Comment venir</p>
+      </header>
+      <div class="access-grid">
+        <figure class="access-photo">
+          <img src="assets/img/store/store-exterior-2.jpg" alt="カフェ るぽんの外観。グレーの建物とウッド格子、専用駐車場" width="1477" height="1108" loading="lazy">
+        </figure>
+        <div>
+          <table class="info-table">
+            <tbody>
+              <tr><th>店名</th><td>Café Le Pont（カフェ るぽん）</td></tr>
+              <tr><th>住所</th><td>福島県白河市向新蔵50番地</td></tr>
+              <tr><th>電話</th><td><a href="tel:09042567353">090-4256-7353</a></td></tr>
+              <tr><th>営業時間</th><td>11:00–15:00（木・金・土・日・祝）</td></tr>
+              <tr><th>定休日</th><td>月・火・水</td></tr>
+              <tr><th>駐車場</th><td>あり（店舗前）</td></tr>
+              <tr><th>デリバリー</th><td>Uber Eats 対応</td></tr>
+              <tr><th>SNS</th><td><a href="https://www.instagram.com/rupon_208/" target="_blank" rel="noopener">Instagram @rupon_208</a></td></tr>
+            </tbody>
+          </table>
+          <a class="btn btn-ghost" href="https://www.google.com/maps/search/?api=1&amp;query=%E7%A6%8F%E5%B3%B6%E7%9C%8C%E7%99%BD%E6%B2%B3%E5%B8%82%E5%90%91%E6%96%B0%E8%94%B550" target="_blank" rel="noopener">Googleマップで開く</a>
+          <div class="map">
+            <iframe title="Café Le Pont の地図" src="https://maps.google.com/maps?q=%E7%A6%8F%E5%B3%B6%E7%9C%8C%E7%99%BD%E6%B2%B3%E5%B8%82%E5%90%91%E6%96%B0%E8%94%B550&amp;hl=ja&amp;z=16&amp;output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CTA ============ -->
+  <section class="cta">
+    <div class="wrap narrow">
+      <p class="fr"><em>À bientôt chez Le Pont.</em></p>
+      <h2>赤いベンチで、お待ちしています。</h2>
+      <p>ご予約・お問い合わせはお電話で。日々のメニューや営業のお知らせは Instagram で発信しています。</p>
+      <div class="hero-actions">
+        <a class="btn btn-light" href="tel:09042567353">090-4256-7353 に電話する</a>
+        <a class="btn btn-outline" href="https://www.instagram.com/rupon_208/" target="_blank" rel="noopener">@rupon_208</a>
+      </div>
+    </div>
+  </section>
 
 </main>
 
-<!-- ============ 8. フッタ ============ -->
-<footer class="site-ft"><div class="wrap">
-  <p class="name">カフェるぽん<small>CAFÉ LE PONT</small></p>
-  <dl>
-    <div><dt>営業時間</dt><dd><span class="num">11:00 – 15:00</span>（ラストオーダー <span class="todo">★</span>）</dd></div>
-    <div><dt>定休日</dt><dd>月曜・火曜・水曜</dd></div>
-    <div><dt>住所</dt><dd>福島県白河市向新蔵50　／　駐車場8台</dd></div>
-    <!-- ★電話番号を差し替え。tel: の側も忘れずに（全5ページ＋固定バー） -->
-    <div><dt>電話</dt><dd><a href="tel:0248000000" class="todo">0248-00-0000</a></dd></div>
-  </dl>
-  <nav class="fnav" aria-label="フッターメニュー">
-    <a href="index.html">ホーム</a>
-    <a href="menu.html">メニュー</a>
-    <a href="access.html">店舗案内・アクセス</a>
-    <a href="sakiori.html">裂き織り</a>
-    <a href="news.html">お知らせ</a>
-  </nav>
-  <p class="copy">© カフェるぽん</p>
-</div></footer>
+<footer class="site-footer">
+  <div class="wrap">
+    <img src="assets/img/logo-white.png" alt="Café Le Pont">
+    <p>福島県白河市向新蔵50番地 &middot; TEL 090-4256-7353</p>
+    <nav class="footer-nav" aria-label="フッターメニュー">
+      <a href="#about">お店について</a>
+      <a href="#interior">店内</a>
+      <a href="#terrace">テラス・ベンチ</a>
+      <a href="#menu">メニュー</a>
+      <a href="#access">アクセス</a>
+      <a href="https://www.instagram.com/rupon_208/" target="_blank" rel="noopener">Instagram</a>
+    </nav>
+    <p class="footer-tag">Le Pont &mdash; 橋がつなぐ、まちのカフェ</p>
+  </div>
+</footer>
 
-<nav class="fixbar" aria-label="電話と地図">
-  <a class="tel" href="tel:0248000000">
-    <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M6 3h4l2 5-3 2a12 12 0 0 0 5 5l2-3 5 2v4a2 2 0 0 1-2 2A17 17 0 0 1 4 5a2 2 0 0 1 2-2z"/></svg>
+<div class="callbar" aria-label="電話・SNS">
+  <a class="cb-tel" href="tel:09042567353">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.3 1.8.6 2.6a2 2 0 0 1-.5 2.1L8.1 9.6a16 16 0 0 0 6 6l1.2-1.2a2 2 0 0 1 2.1-.5c.8.3 1.7.5 2.6.6a2 2 0 0 1 1.7 2z"/></svg>
     電話する
   </a>
-  <a class="map" href="https://www.google.com/maps/search/?api=1&amp;query=福島県白河市向新蔵50" target="_blank" rel="noopener">
-    <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round"><path d="M12 21s7-6.4 7-11a7 7 0 1 0-14 0c0 4.6 7 11 7 11z"/><circle cx="12" cy="10" r="2.6"/></svg>
-    地図アプリで開く
+  <a class="cb-ig" href="https://www.instagram.com/rupon_208/" target="_blank" rel="noopener">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg>
+    Instagram
   </a>
-</nav>
-
-<script>
-  document.querySelectorAll('video[autoplay]').forEach(function (video) {
-    video.muted = true;
-    video.defaultMuted = true;
-    var start = function () { video.play().catch(function () {}); };
-    start();
-    document.addEventListener('visibilitychange', function () {
-      if (!document.hidden) start();
-    });
-  });
-</script>
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "CafeOrCoffeeShop",
-  "name": "カフェるぽん",
-  "alternateName": "Café Le Pont",
-  "description": "福島県白河市の家族で食べて遊べるカフェ。カレー、ポテト、フレンチトーストはファミリーサイズ。2階にはフランスのおもちゃ部屋があります。",
-  "address": {
-    "@type": "PostalAddress",
-    "streetAddress": "向新蔵50",
-    "addressLocality": "白河市",
-    "addressRegion": "福島県",
-    "addressCountry": "JP"
-  },
-  "servesCuisine": ["カレー", "フレンチトースト", "カフェ"],
-  "openingHoursSpecification": [{
-    "@type": "OpeningHoursSpecification",
-    "dayOfWeek": ["Thursday", "Friday", "Saturday", "Sunday"],
-    "opens": "11:00",
-    "closes": "15:00"
-  }],
-  "publicAccess": true,
-  "amenityFeature": [{
-    "@type": "LocationFeatureSpecification",
-    "name": "駐車場",
-    "value": "8台"
-  }]
-}
-</script>
-<!--
-  ★構造化データの未記入項目：telephone / url / priceRange / geo / image
-     電話番号・ドメイン・最低価格が確定したら追記してください（SETUP.md）。
-     未確定のまま仮の値を書くと Google に誤情報として拾われます。空欄のままが正解です。
--->
+</div>
 
 </body>
 </html>
