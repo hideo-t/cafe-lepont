@@ -49,6 +49,8 @@ body{
 }
 img,video{max-width:100%;height:auto;display:block}
 a{color:var(--plum);text-decoration:none}
+.social-link{display:inline-flex;align-items:center;gap:.4rem}
+.social-link svg{width:20px;height:20px;flex-shrink:0}
 .uber-link{color:inherit;text-decoration:underline;text-underline-offset:.18em}
 h1,h2,h3{line-height:1.35;margin:0;font-weight:500}
 .wrap{width:min(100% - 2.5rem,var(--wrap));margin-inline:auto}
@@ -228,8 +230,7 @@ h1,h2,h3{line-height:1.35;margin:0;font-weight:500}
   .gal-interior li:first-child{grid-column:span 2;grid-row:span 1;aspect-ratio:16/9}
   .menu-signature img{min-height:260px}
 }
-@media(max-width:640px){
-  .section{padding:3.5rem 0}
+@media(max-width:900px){
   /* backdrop-filter作る含有ブロックを解除しないとfixedパネルがヘッダー内に閉じ込められる */
   .site-header{backdrop-filter:none;-webkit-backdrop-filter:none;background:var(--cream)}
   .site-nav{position:fixed;inset:0 0 0 auto;width:min(82vw,320px);background:var(--cream);
@@ -243,6 +244,9 @@ h1,h2,h3{line-height:1.35;margin:0;font-weight:500}
   #navchk:checked ~ .header-inner .nav-toggle span:nth-child(1){transform:translateY(7px) rotate(45deg)}
   #navchk:checked ~ .header-inner .nav-toggle span:nth-child(2){opacity:0}
   #navchk:checked ~ .header-inner .nav-toggle span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+}
+@media(max-width:640px){
+  .section{padding:3.5rem 0}
   .menu-grid{grid-template-columns:1fr}
   .pillars{grid-template-columns:1fr}
   .terrace-bench img{aspect-ratio:4/3}
@@ -272,6 +276,7 @@ h1,h2,h3{line-height:1.35;margin:0;font-weight:500}
       <a href="#terrace">テラス・ベンチ</a>
       <a href="#menu">メニュー</a>
       <a href="#access">アクセス</a>
+      <a class="social-link" href="https://www.instagram.com/rupon_208/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg><span>Instagram</span></a>
       <a class="nav-cta" href="tel:09042567353"><b>090-4256-7353</b><small>ご予約・お問い合わせ</small></a>
     </nav>
   </div>
@@ -519,7 +524,7 @@ h1,h2,h3{line-height:1.35;margin:0;font-weight:500}
       <a href="#terrace">テラス・ベンチ</a>
       <a href="#menu">メニュー</a>
       <a href="#access">アクセス</a>
-      <a href="https://www.instagram.com/rupon_208/" target="_blank" rel="noopener">Instagram</a>
+      <a class="social-link" href="https://www.instagram.com/rupon_208/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg><span>Instagram</span></a>
     </nav>
     <p class="footer-tag">Le Pont &mdash; 橋がつなぐ、まちのカフェ</p>
   </div>
@@ -596,5 +601,6 @@ window.addEventListener('load',function(){
 
 </body>
 </html>
+
 
 
