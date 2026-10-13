@@ -121,6 +121,11 @@ h1,h2,h3{line-height:1.35;margin:0;font-weight:500}
 .hero-campaign .hc-review{margin:.7rem 0 0;padding-top:.7rem;border-top:1px dashed var(--line);font-size:.84rem;color:var(--ink-soft)}
 .hero-campaign .hc-review a{color:var(--plum);text-decoration:underline;text-underline-offset:.18em}
 .hero-campaign .hc-note{margin:.5rem 0 0;font-size:.7rem;color:var(--muted)}
+.campaign-sec{background:var(--paper);padding:3.5rem 0}
+.campaign-fig{margin:0 auto;max-width:640px}
+.campaign-fig img{width:100%;height:auto;border-radius:14px;box-shadow:0 18px 40px -18px rgba(78,29,60,.45)}
+.campaign-fig figcaption{text-align:center;font-size:.78rem;color:var(--muted);margin-top:.8rem}
+.hero-campaign .hc-more{display:inline-block;margin-top:.5rem;font-size:.8rem;color:var(--plum);text-decoration:underline;text-underline-offset:.18em}
 .hero-facts{position:absolute;z-index:2;left:0;right:0;bottom:0;margin:0;
   display:flex;flex-wrap:wrap;justify-content:center;gap:0;
   background:rgba(40,14,30,.55);backdrop-filter:blur(6px);border-top:1px solid rgba(255,255,255,.14)}
@@ -376,6 +381,7 @@ h1,h2,h3{line-height:1.35;margin:0;font-weight:500}
         <p class="hc-main">Instagram <a href="https://www.instagram.com/rupon_208/" target="_blank" rel="noopener">@rupon_208</a> をフォローして、お会計のときにフォロー画面を見せてください。
           <span class="hc-gift">ドリンク・スイーツ・ソフトクリームのいずれか1点 無料</span></p>
         <p class="hc-review">ご感想は、よろしければ <a href="https://www.google.com/maps/search/?api=1&amp;query=%E3%82%AB%E3%83%95%E3%82%A7%E3%82%8B%E3%81%BD%E3%82%93%20%E7%99%BD%E6%B2%B3%E5%B8%82%E5%90%91%E6%96%B0%E8%94%B550" target="_blank" rel="noopener">Googleマップのクチコミ</a> でお聞かせください。</p>
+        <a class="hc-more" href="#campaign">キャンペーンの詳細を見る</a>
         <p class="hc-note">※キャンペーンの内容は予告なく変更・終了する場合があります。</p>
       </div>
     </div>
@@ -385,6 +391,20 @@ h1,h2,h3{line-height:1.35;margin:0;font-weight:500}
       <div><dt>Parking</dt><dd>駐車場あり</dd></div>
       <div><dt>Delivery</dt><dd><a class="uber-link" href="https://www.ubereats.com/jp/store/%E3%82%AB%E3%83%95%E3%82%A7%E3%82%8B%E3%81%BB%E3%82%93/h5oHDyTFX6-hM830LQradA?srsltid=AU7gw4WjFhVm8lzcCSdccPoFkjZ5MI-fsxpGR_SJoHnNoVECKi08KiCx" target="_blank" rel="noopener">Uber Eats</a> 対応</dd></div>
     </dl>
+  </section>
+
+  <!-- ============ CAMPAIGN ============ -->
+  <section class="campaign-sec" id="campaign">
+    <div class="wrap">
+      <figure class="campaign-fig">
+        <img src="assets/img/campaign-instagram-follow.webp"
+             srcset="assets/img/campaign-instagram-follow-800.webp 800w, assets/img/campaign-instagram-follow.webp 1254w"
+             sizes="(max-width:680px) 100vw, 640px"
+             alt="Instagramフォローで1点無料キャンペーン。Instagram @rupon_208 をフォローして、お会計時にフォロー画面を見せると、ドリンク・スイーツ・ソフトクリームのいずれか1点が無料。ご感想は、よろしければGoogleマップのクチコミでお聞かせください。"
+             width="1254" height="1254" loading="lazy">
+        <figcaption>※写真・画面はイメージです。キャンペーンの内容は予告なく変更・終了する場合があります。</figcaption>
+      </figure>
+    </div>
   </section>
 
   <!-- ============ ABOUT ============ -->
