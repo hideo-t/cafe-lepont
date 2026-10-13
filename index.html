@@ -101,7 +101,7 @@ h1,h2,h3{line-height:1.35;margin:0;font-weight:500}
 .hero-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 60%}
 .hero::after{content:"";position:absolute;inset:0;
   background:linear-gradient(180deg,rgba(40,16,32,.55) 0%,rgba(62,20,48,.45) 45%,rgba(40,16,32,.72) 100%)}
-.hero-inner{position:relative;z-index:2;padding:5rem 1.25rem}
+.hero-inner{position:relative;z-index:2;padding:5rem 1.25rem 7.5rem}
 .hero-kicker{font-size:.95rem;letter-spacing:.14em;margin:0 0 1.6rem;text-shadow:0 1px 10px rgba(0,0,0,.4)}
 .hero-kicker span{display:inline-block;margin-top:.3rem;font-size:1.05rem}
 .hero-logo{margin:0 auto;max-width:min(380px,64vw)}
@@ -111,6 +111,16 @@ h1,h2,h3{line-height:1.35;margin:0;font-weight:500}
 .hero-fr{font-family:var(--serif-en);font-style:italic;font-size:1.15rem;margin:.2rem 0 .1rem;opacity:.95}
 .hero-ja{font-family:var(--serif-ja);font-size:.95rem;margin:.1rem 0 2rem;opacity:.92}
 .hero-actions{display:flex;gap:.8rem;justify-content:center;flex-wrap:wrap}
+.hero-campaign{margin:2rem auto 0;max-width:520px;background:rgba(255,255,255,.95);color:var(--ink);border-radius:14px;
+  padding:1.2rem 1.4rem 1rem;box-shadow:0 14px 34px -14px rgba(0,0,0,.55);text-align:center;border-top:4px solid var(--pink)}
+.hero-campaign .hc-tag{display:inline-block;font-size:.66rem;letter-spacing:.24em;text-transform:uppercase;color:#fff;background:var(--pink);
+  border-radius:999px;padding:.15rem .8rem;margin:0 0 .6rem}
+.hero-campaign .hc-main{margin:0 0 .5rem;font-size:.92rem;line-height:1.7;color:var(--ink-soft)}
+.hero-campaign .hc-main a{color:var(--plum);font-weight:700}
+.hero-campaign .hc-gift{display:block;margin-top:.35rem;font-family:var(--serif-ja);font-size:1.12rem;color:var(--grape);font-weight:500}
+.hero-campaign .hc-review{margin:.7rem 0 0;padding-top:.7rem;border-top:1px dashed var(--line);font-size:.84rem;color:var(--ink-soft)}
+.hero-campaign .hc-review a{color:var(--plum);text-decoration:underline;text-underline-offset:.18em}
+.hero-campaign .hc-note{margin:.5rem 0 0;font-size:.7rem;color:var(--muted)}
 .hero-facts{position:absolute;z-index:2;left:0;right:0;bottom:0;margin:0;
   display:flex;flex-wrap:wrap;justify-content:center;gap:0;
   background:rgba(40,14,30,.55);backdrop-filter:blur(6px);border-top:1px solid rgba(255,255,255,.14)}
@@ -360,6 +370,13 @@ h1,h2,h3{line-height:1.35;margin:0;font-weight:500}
       <div class="hero-actions">
         <a class="btn btn-light" href="#menu">メニューを見る</a>
         <a class="btn btn-outline" href="https://www.instagram.com/rupon_208/" target="_blank" rel="noopener">Instagram</a>
+      </div>
+      <div class="hero-campaign">
+        <p class="hc-tag">Campaign</p>
+        <p class="hc-main">Instagram <a href="https://www.instagram.com/rupon_208/" target="_blank" rel="noopener">@rupon_208</a> をフォローして、お会計のときにフォロー画面を見せてください。
+          <span class="hc-gift">ドリンク・スイーツ・ソフトクリームのいずれか1点 無料</span></p>
+        <p class="hc-review">ご感想は、よろしければ <a href="https://www.google.com/maps/search/?api=1&amp;query=%E3%82%AB%E3%83%95%E3%82%A7%E3%82%8B%E3%81%BD%E3%82%93%20%E7%99%BD%E6%B2%B3%E5%B8%82%E5%90%91%E6%96%B0%E8%94%B550" target="_blank" rel="noopener">Googleマップのクチコミ</a> でお聞かせください。</p>
+        <p class="hc-note">※キャンペーンの内容は予告なく変更・終了する場合があります。</p>
       </div>
     </div>
     <dl class="hero-facts">
