@@ -1,159 +1,468 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="ja">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="robots" content="noindex,nofollow"><!-- REVIEW-ONLY: remove this line before public launch -->
-<title>裂き織りのバッグ｜カフェるぽん（白河市）</title>
-<meta name="description" content="白河市のカフェるぽんの隣、同じ敷地の工房で織っている裂き織りのバッグ。古い布を裂いて織り直した一点物です。店内でご覧いただけます。">
-<link rel="canonical" href="./sakiori.html">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<title>裂き織りのバッグ・帯バッグ｜白河花子の咲織館 × カフェるぽん（白河市）</title>
+<meta name="description" content="福島県白河市のカフェるぽんで、白河花子の咲織館（さきおりかん）の裂き織りバッグと帯バッグを委託販売しています。古布を一本一本裂いて織り上げた一点物。咲織バッグ3,000円・帯バッグ2,000円。木〜日 11:00–15:00。">
+<meta property="og:type" content="website">
+<meta property="og:title" content="裂き織りのバッグ・帯バッグ｜白河花子の咲織館 × カフェるぽん">
+<meta property="og:description" content="古布を裂いて織り上げた、世界にひとつの裂き織りバッグ。カフェるぽん店内で委託販売中。">
+<meta property="og:image" content="https://lepon.shop/assets/img/store/store-exterior-front.jpg">
+<meta property="og:url" content="https://lepon.shop/sakiori.html">
+<link rel="canonical" href="https://lepon.shop/sakiori.html">
+<meta property="og:locale" content="ja_JP">
+<meta property="og:site_name" content="Café Le Pont（カフェ るぽん）">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo+Black&family=Noto+Sans+JP:wght@400;700;900&display=swap">
-<link rel="stylesheet" href="assets/css/style.css">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Noto+Sans+JP:wght@300;400;500;700&family=Noto+Serif+JP:wght@400;500&display=swap" rel="stylesheet">
+<link rel="icon" type="image/png" href="assets/img/logo-180.png">
+<link rel="apple-touch-icon" href="assets/img/logo-180.png">
+<style>
+/* ===== Café Le Pont — real-photo rebuild ===== */
+:root{
+  --grape:#4E1D3C;      /* deep aubergine (dark sections / text accents) */
+  --plum:#7C2E63;       /* brand purple */
+  --orchid:#B45C97;     /* signboard orchid */
+  --pink:#E6197F;       /* bridge rail accent */
+  --wood:#A06A3E;       /* cedar slat */
+  --red:#D5333B;        /* red bench pop */
+  --cream:#FBF7F1;
+  --paper:#F4ECE2;
+  --sand:#EADFD0;
+  --ink:#2D2530;
+  --ink-soft:#5C5260;
+  --muted:#9A8FA0;
+  --line:#E4D8CB;
+  --serif-en:"Cormorant Garamond","Times New Roman",serif;
+  --serif-ja:"Noto Serif JP","Hiragino Mincho ProN","Yu Mincho",serif;
+  --sans:"Noto Sans JP","Hiragino Kaku Gothic ProN","Yu Gothic",sans-serif;
+  --wrap:1140px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;background:var(--cream);color:var(--ink);
+  font-family:var(--sans);font-weight:400;line-height:1.85;
+  -webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;
+  overflow-x:hidden;
+}
+img,video{max-width:100%;height:auto;display:block}
+a{color:var(--plum);text-decoration:none}
+.social-link{display:inline-flex;align-items:center;gap:.4rem}
+.social-link svg{width:20px;height:20px;flex-shrink:0}
+.uber-link{color:inherit;text-decoration:underline;text-underline-offset:.18em}
+h1,h2,h3{line-height:1.35;margin:0;font-weight:500}
+.wrap{width:min(100% - 2.5rem,var(--wrap));margin-inline:auto}
+.narrow{max-width:760px}
+.skip{position:absolute;left:-999px}
+.skip:focus{left:1rem;top:1rem;background:var(--grape);color:#fff;padding:.6rem 1rem;border-radius:6px;z-index:999}
+
+/* ---- buttons ---- */
+.btn{display:inline-flex;align-items:center;gap:.5rem;justify-content:center;
+  padding:.85rem 1.6rem;border-radius:999px;font-weight:500;font-size:.95rem;
+  border:1.5px solid transparent;transition:.25s;cursor:pointer}
+.btn-fill{background:var(--plum);color:#fff;border-color:var(--plum)}
+.btn-fill:hover{background:var(--grape);border-color:var(--grape)}
+.btn-light{background:#fff;color:var(--plum);border-color:#fff}
+.btn-light:hover{background:var(--cream)}
+.btn-outline{background:transparent;color:#fff;border-color:rgba(255,255,255,.55)}
+.btn-outline:hover{border-color:#fff;background:rgba(255,255,255,.1)}
+.btn-ghost{background:transparent;color:var(--plum);border-color:var(--orchid)}
+.btn-ghost:hover{background:var(--plum);color:#fff;border-color:var(--plum)}
+
+/* ---- bridge divider ---- */
+.bridge{display:block;margin:0 auto;color:var(--orchid)}
+
+/* ---- header ---- */
+.site-header{position:sticky;top:0;z-index:100;background:rgba(251,247,241,.92);
+  backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.header-inner{display:flex;align-items:center;justify-content:space-between;gap:1rem;min-height:72px;padding:.4rem 0}
+.brand{display:flex;align-items:center;gap:.6rem}
+.brand img{height:52px;width:auto}
+.brand b{font-family:var(--serif-en);font-weight:500;font-size:1.15rem;color:var(--grape);letter-spacing:.02em;line-height:1}
+.brand span{display:block;font-size:.66rem;letter-spacing:.3em;color:var(--orchid);margin-top:.2rem}
+.site-nav{display:flex;align-items:center;gap:.3rem}
+.site-nav a{padding:.5rem .8rem;color:var(--ink-soft);font-size:.9rem;position:relative}
+.site-nav a:not(.nav-cta):hover{color:var(--plum)}
+.site-nav a:not(.nav-cta)::after{content:"";position:absolute;left:.8rem;right:.8rem;bottom:.35rem;height:1.5px;background:var(--pink);transform:scaleX(0);transform-origin:left;transition:.25s}
+.site-nav a:not(.nav-cta):hover::after{transform:scaleX(1)}
+.nav-cta{display:flex;flex-direction:column;align-items:center;background:var(--plum);color:#fff!important;
+  padding:.45rem 1rem;border-radius:999px;margin-left:.4rem;line-height:1.15}
+.nav-cta:hover{background:var(--grape)}
+.nav-cta b{font-size:.95rem;font-weight:700;letter-spacing:.02em}
+.nav-cta small{font-size:.6rem;letter-spacing:.2em;opacity:.85}
+.nav-toggle{display:none}
+
+/* ---- hero ---- */
+.hero{position:relative;min-height:88vh;display:flex;align-items:center;justify-content:center;text-align:center;color:#fff;overflow:hidden}
+.hero-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 60%}
+.hero::after{content:"";position:absolute;inset:0;
+  background:linear-gradient(180deg,rgba(40,16,32,.55) 0%,rgba(62,20,48,.45) 45%,rgba(40,16,32,.72) 100%)}
+.hero-inner{position:relative;z-index:2;padding:5rem 1.25rem}
+.hero-kicker{font-size:.95rem;letter-spacing:.14em;margin:0 0 1.6rem;text-shadow:0 1px 10px rgba(0,0,0,.4)}
+.hero-kicker span{display:inline-block;margin-top:.3rem;font-size:1.05rem}
+.hero-logo{margin:0 auto;max-width:min(380px,64vw)}
+.hero-logo img{display:block;width:100%;height:auto;filter:drop-shadow(0 4px 18px rgba(0,0,0,.35))}
+.hero-depuis{font-family:var(--serif-en);letter-spacing:.35em;font-size:.8rem;margin:1.6rem 0 1rem;display:flex;gap:1rem;align-items:center;justify-content:center;opacity:.9}
+.hero-depuis::before,.hero-depuis::after{content:"";width:40px;height:1px;background:rgba(255,255,255,.6)}
+.hero-fr{font-family:var(--serif-en);font-style:italic;font-size:1.15rem;margin:.2rem 0 .1rem;opacity:.95}
+.hero-ja{font-family:var(--serif-ja);font-size:.95rem;margin:.1rem 0 2rem;opacity:.92}
+.hero-actions{display:flex;gap:.8rem;justify-content:center;flex-wrap:wrap}
+.hero-facts{position:absolute;z-index:2;left:0;right:0;bottom:0;margin:0;
+  display:flex;flex-wrap:wrap;justify-content:center;gap:0;
+  background:rgba(40,14,30,.55);backdrop-filter:blur(6px);border-top:1px solid rgba(255,255,255,.14)}
+.hero-facts>div{flex:1 1 auto;min-width:150px;padding:.9rem 1.2rem;text-align:center;border-left:1px solid rgba(255,255,255,.12)}
+.hero-facts>div:first-child{border-left:none}
+.hero-facts dt{font-size:.62rem;letter-spacing:.24em;color:var(--orchid);text-transform:uppercase}
+.hero-facts dd{margin:.25rem 0 0;font-size:.9rem;color:#fff}
+
+/* ---- section scaffolding ---- */
+.section{padding:5.5rem 0}
+.section-head{text-align:center;margin-bottom:3rem}
+.section-label{font-family:var(--serif-en);letter-spacing:.3em;text-transform:uppercase;font-size:.78rem;color:var(--orchid);margin:0 0 .6rem}
+.section-title{font-family:var(--serif-ja);font-size:clamp(1.5rem,4.5vw,2.1rem);color:var(--grape)}
+.section-sub{font-family:var(--serif-en);font-style:italic;color:var(--muted);margin:.4rem 0 0}
+
+/* ---- about ---- */
+.about{background:linear-gradient(180deg,var(--cream),var(--paper))}
+.about-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:3rem;align-items:center}
+.about-text .drop{font-family:var(--serif-ja);font-size:1.25rem;color:var(--plum);margin:0 0 1rem}
+.about-text p{margin:0 0 1rem;color:var(--ink-soft)}
+.about-text em{font-family:var(--serif-en);font-style:italic;color:var(--plum)}
+.about-photo{position:relative}
+.about-photo img{border-radius:10px;box-shadow:0 18px 40px -18px rgba(78,29,60,.5);aspect-ratio:4/3;object-fit:cover;width:100%}
+.about-photo figcaption{position:absolute;left:1rem;bottom:1rem;background:rgba(124,46,99,.9);color:#fff;font-size:.72rem;letter-spacing:.1em;padding:.35rem .8rem;border-radius:999px}
+.pillars{list-style:none;margin:3rem 0 0;padding:0;display:grid;grid-template-columns:repeat(4,1fr);gap:1.2rem}
+.pillars li{background:#fff;border:1px solid var(--line);border-radius:12px;padding:1.5rem 1.2rem;text-align:center}
+.pillars .ic{width:46px;height:46px;margin:0 auto .8rem;color:var(--plum)}
+.pillars h3{font-size:1rem;color:var(--grape);margin-bottom:.4rem}
+.pillars p{font-size:.84rem;color:var(--ink-soft);margin:0;line-height:1.7}
+
+/* ---- gallery (interior / terrace) ---- */
+.band-interior{background:var(--cream)}
+.band-terrace{background:linear-gradient(180deg,var(--grape),#3a1430);color:#fff}
+.band-terrace .section-title{color:#fff}
+.band-terrace .section-sub{color:var(--orchid)}
+.gal{display:grid;gap:1rem}
+.gal-interior{grid-template-columns:2fr 1fr 1fr;grid-auto-rows:220px}
+.gal-interior li{list-style:none;overflow:hidden;border-radius:10px}
+.gal-interior li:first-child{grid-row:span 2;grid-column:span 1}
+.gal-interior img{width:100%;height:100%;object-fit:cover;transition:.5s}
+.gal-interior li:hover img{transform:scale(1.05)}
+.terrace-layout{display:grid;grid-template-columns:1fr 1fr;gap:2.5rem;align-items:center}
+.terrace-bench{position:relative;border-radius:12px;overflow:hidden;box-shadow:0 20px 50px -20px rgba(0,0,0,.6)}
+.terrace-bench img{width:100%;aspect-ratio:3/4;object-fit:cover}
+.terrace-copy p{color:rgba(255,255,255,.85)}
+.terrace-copy .big{font-family:var(--serif-ja);font-size:1.4rem;color:#fff;margin:0 0 1rem}
+.terrace-mini{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-top:1.5rem}
+.terrace-mini img{border-radius:10px;aspect-ratio:3/4;object-fit:cover}
+
+/* ---- menu ---- */
+.menu{background:var(--paper)}
+.menu-note{text-align:center;color:var(--ink-soft);font-size:.9rem;margin:-1.5rem auto 2.5rem;max-width:620px}
+.menu-signature{display:grid;grid-template-columns:1fr 1fr;gap:0;border-radius:14px;overflow:hidden;
+  box-shadow:0 20px 50px -24px rgba(78,29,60,.45);background:#fff;margin-bottom:2.5rem}
+.menu-signature img{width:100%;height:100%;object-fit:cover;min-height:320px}
+.menu-signature .txt{padding:2.5rem;display:flex;flex-direction:column;justify-content:center}
+.menu-signature .tag{font-family:var(--serif-en);font-style:italic;color:var(--pink);margin:0 0 .5rem}
+.menu-signature h3{font-family:var(--serif-ja);font-size:1.6rem;color:var(--grape);margin:0 0 .9rem}
+.menu-signature p{color:var(--ink-soft);margin:0}
+.menu-clip{max-width:820px;margin:0 auto 2.5rem;border-radius:14px;overflow:hidden;position:relative;box-shadow:0 20px 50px -24px rgba(78,29,60,.45)}
+.menu-clip video{display:block;width:100%;aspect-ratio:16/9;object-fit:cover}
+.menu-clip figcaption{position:absolute;left:1rem;bottom:.9rem;background:rgba(124,46,99,.85);color:#fff;font-size:.72rem;letter-spacing:.08em;padding:.3rem .8rem;border-radius:999px;backdrop-filter:blur(4px)}
+.menu-grid{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(3,1fr);gap:1.6rem}
+.menu-grid li{background:#fff;border-radius:12px;overflow:hidden;border:1px solid var(--line);transition:.3s}
+.menu-grid li:hover{transform:translateY(-4px);box-shadow:0 16px 36px -18px rgba(78,29,60,.4)}
+.menu-grid figure{margin:0;overflow:hidden;aspect-ratio:4/3}
+.menu-grid img{width:100%;height:100%;object-fit:cover;transition:.5s}
+.menu-grid li:hover img{transform:scale(1.06)}
+.menu-grid .photo-contain{background:var(--paper)}
+.menu-grid .photo-contain img{object-fit:contain}
+.menu-grid li:hover .photo-contain img{transform:none}
+.menu-grid .body{padding:1.1rem 1.25rem 1.4rem}
+.menu-grid h3{font-size:1.05rem;color:var(--grape);margin-bottom:.35rem}
+.menu-grid p{font-size:.84rem;color:var(--ink-soft);margin:0;line-height:1.7}
+.menu-grid .price{display:inline-block;margin-top:.6rem;font-weight:700;color:var(--plum)}
+.menu-foot{text-align:center;margin-top:2.5rem;color:var(--ink-soft);font-size:.9rem}
+.menu-foot .pills{display:flex;gap:.6rem;flex-wrap:wrap;justify-content:center;margin-bottom:1.2rem}
+.menu-foot .pills span{background:#fff;border:1px solid var(--line);border-radius:999px;padding:.4rem 1rem;font-size:.82rem;color:var(--ink-soft)}
+
+/* ---- access ---- */
+.access-grid{display:grid;grid-template-columns:1fr 1fr;gap:2.5rem;align-items:stretch}
+.access-photo{border-radius:12px;overflow:hidden;box-shadow:0 18px 40px -20px rgba(78,29,60,.4)}
+.access-photo img{width:100%;height:100%;object-fit:cover;min-height:280px}
+.info-table{width:100%;border-collapse:collapse;margin-bottom:1.5rem}
+.info-table th,.info-table td{text-align:left;padding:.75rem .5rem;border-bottom:1px solid var(--line);font-size:.9rem;vertical-align:top}
+.info-table th{width:7.5em;color:var(--plum);font-weight:500}
+.map{border-radius:12px;overflow:hidden;border:1px solid var(--line);margin-top:1.2rem}
+.map iframe{width:100%;height:300px;border:0;display:block}
+
+/* ---- cta ---- */
+.cta{background:linear-gradient(135deg,var(--plum),var(--grape));color:#fff;text-align:center;padding:5rem 0}
+.cta .fr{font-family:var(--serif-en);font-style:italic;color:var(--orchid);margin:0 0 .6rem}
+.cta h2{font-family:var(--serif-ja);font-size:clamp(1.4rem,4vw,1.9rem);margin:0 0 1rem}
+.cta p{color:rgba(255,255,255,.85);margin:0 auto 2rem;max-width:560px}
+
+/* ---- footer ---- */
+.site-footer{background:#2a1020;color:rgba(255,255,255,.7);padding:3rem 0 5.5rem;text-align:center}
+.site-footer img{height:70px;width:auto;margin:0 auto 1rem}
+.footer-nav{display:flex;gap:1.2rem;justify-content:center;flex-wrap:wrap;margin:1.4rem 0}
+.footer-nav a{color:rgba(255,255,255,.7);font-size:.85rem}
+.footer-nav a:hover{color:#fff}
+.footer-tag{font-family:var(--serif-ja);font-size:.82rem;color:var(--orchid);margin-top:1rem}
+
+/* ---- mobile call bar ---- */
+.callbar{position:fixed;left:0;right:0;bottom:0;z-index:90;display:none;
+  grid-template-columns:1fr 1fr;background:#fff;border-top:1px solid var(--line);
+  padding-bottom:env(safe-area-inset-bottom)}
+.callbar a{display:flex;align-items:center;justify-content:center;gap:.5rem;padding:.9rem;font-size:.9rem;font-weight:500}
+.callbar svg{width:20px;height:20px}
+.callbar .cb-tel{color:var(--plum)}
+.callbar .cb-ig{color:#fff;background:linear-gradient(135deg,var(--plum),var(--pink))}
+
+/* ---- responsive ---- */
+@media(max-width:900px){
+  .about-grid,.terrace-layout,.menu-signature,.access-grid{grid-template-columns:1fr}
+  .pillars{grid-template-columns:1fr 1fr}
+  .menu-grid{grid-template-columns:1fr 1fr}
+  .gal-interior{grid-template-columns:1fr 1fr;grid-auto-rows:160px}
+  .gal-interior li:first-child{grid-column:span 2;grid-row:span 1;aspect-ratio:16/9}
+  .menu-signature img{min-height:260px}
+}
+@media(max-width:900px){
+  /* backdrop-filter作る含有ブロックを解除しないとfixedパネルがヘッダー内に閉じ込められる */
+  .site-header{backdrop-filter:none;-webkit-backdrop-filter:none;background:var(--cream)}
+  .site-nav{position:fixed;inset:0 0 0 auto;width:min(82vw,320px);background:var(--cream);
+    flex-direction:column;align-items:stretch;padding:5rem 1.5rem 2rem;gap:.2rem;z-index:110;
+    transform:translateX(100%);transition:.3s;box-shadow:-10px 0 40px -20px rgba(0,0,0,.4)}
+  .site-nav a{padding:.95rem .6rem;border-bottom:1px solid var(--line);color:var(--grape);font-size:1rem;font-weight:500}
+  .nav-cta{flex-direction:row;gap:.5rem;justify-content:center;margin:.8rem 0 0}
+  #navchk:checked ~ .header-inner .site-nav{transform:translateX(0)}
+  .nav-toggle{display:flex;flex-direction:column;gap:5px;width:30px;cursor:pointer;z-index:120;background:none;border:0;padding:4px}
+  .nav-toggle span{height:2px;background:var(--grape);border-radius:2px;transition:.3s}
+  #navchk:checked ~ .header-inner .nav-toggle span:nth-child(1){transform:translateY(7px) rotate(45deg)}
+  #navchk:checked ~ .header-inner .nav-toggle span:nth-child(2){opacity:0}
+  #navchk:checked ~ .header-inner .nav-toggle span:nth-child(3){transform:translateY(-7px) rotate(-45deg)}
+}
+@media(max-width:640px){
+  .section{padding:3.5rem 0}
+  .menu-grid{grid-template-columns:1fr}
+  .pillars{grid-template-columns:1fr}
+  .terrace-bench img{aspect-ratio:4/3}
+  .hero{flex-direction:column;justify-content:center}
+  .hero-inner{padding:3.2rem 1.25rem 2rem}
+  .hero-facts{position:static;margin-top:.5rem}
+  .hero-facts>div{min-width:50%}
+  .callbar{display:grid}
+  .site-footer{padding-bottom:6rem}
+}
+
+/* ---- sakiori page ---- */
+.sk-hero{background:linear-gradient(135deg,var(--grape),var(--plum));color:#fff;text-align:center;padding:5rem 0 4.2rem}
+.sk-hero .section-label{color:var(--orchid)}
+.sk-hero h1{font-family:var(--serif-ja);font-size:clamp(1.6rem,5vw,2.4rem);margin:0 0 .8rem;font-weight:500}
+.sk-hero .lead{font-family:var(--serif-ja);color:rgba(255,255,255,.9);margin:0;line-height:2}
+.sk-text p{color:var(--ink-soft);margin:0 0 1rem}
+.sk-items{list-style:none;padding:0;margin:0 auto;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:1.2rem;max-width:760px}
+.sk-items li{background:#fff;border:1px solid var(--line);border-radius:10px;padding:1.6rem 1.4rem;text-align:center}
+.sk-items h3{font-family:var(--serif-ja);color:var(--grape);font-size:1.15rem;margin:0 0 .4rem}
+.sk-items .price{font-size:1.5rem;color:var(--plum);font-weight:500;margin:0}
+.sk-items p{color:var(--ink-soft);font-size:.88rem;margin:.5rem 0 0}
+.sk-note{text-align:center;color:var(--muted);font-size:.82rem;margin:1.2rem auto 0;max-width:620px}
+.sk-embeds{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,320px),1fr));gap:1.2rem;align-items:start}
+.sk-embeds .instagram-media{margin:0 auto!important;min-width:0!important;width:100%!important}
+@media (max-width:560px){.sk-items{grid-template-columns:1fr}}
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://lepon.shop/sakiori.html",
+      "url": "https://lepon.shop/sakiori.html",
+      "name": "裂き織りのバッグ・帯バッグ｜白河花子の咲織館 × カフェるぽん",
+      "inLanguage": "ja",
+      "about": {"@type": "Thing", "name": "裂き織り（さきおり）", "description": "着物や古い布を細く裂き、糸の代わりに織り込む日本の伝統的な織物"},
+      "isPartOf": {"@type": "WebSite", "url": "https://lepon.shop/", "name": "Café Le Pont（カフェ るぽん）"},
+      "mentions": [{"@id": "https://lepon.shop/#cafe"}, {"@id": "https://lepon.shop/sakiori.html#maker"}]
+    },
+    {
+      "@type": "Organization",
+      "@id": "https://lepon.shop/sakiori.html#maker",
+      "name": "白河花子の咲織館（さきおりかん）",
+      "description": "福島県白河市で裂き織りのバッグや帯バッグを手づくりしている作り手",
+      "sameAs": ["https://www.instagram.com/sirakawahanako/"]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {"@type": "ListItem", "position": 1, "name": "ホーム", "item": "https://lepon.shop/"},
+        {"@type": "ListItem", "position": 2, "name": "裂き織り", "item": "https://lepon.shop/sakiori.html"}
+      ]
+    }
+  ]
+}
+</script>
 </head>
 <body>
 
-<!-- ★公開前に削除：制作中バー -->
-<div class="wip"><div class="wrap">
-  <b>制作中</b><span>赤枠の値（★）は未確定です。写真はすべて仮です。SETUP.md をご確認ください。</span>
-</div></div>
+<a class="skip" href="#main">本文へスキップ</a>
 
-<div class="hours-bar"><div class="wrap">
-  <span>営業日　木・金・土・日</span>
-  <span class="num">11:00 – 15:00</span>
-</div></div>
-
-<header class="site-hd"><div class="wrap">
-  <a class="brand" href="index.html">
-    <img class="brand-logo" src="assets/img/logo-lepont-bridge.webp" alt="カフェるぽん — 動物たちが橋を渡るロゴ" width="518" height="520">
-    <span class="brand-copy"><span class="jp">カフェるぽん</span><span class="fr">CAFÉ LE PONT</span></span>
-  </a>
-  <nav class="nav" aria-label="メインメニュー">
-    <a href="index.html">ホーム</a>
-    <a href="menu.html">メニュー</a>
-    <a href="access.html">店舗案内・アクセス</a>
-    <a href="sakiori.html" aria-current="page">裂き織り</a>
-    <a href="news.html">お知らせ</a>
-  </nav>
-</div></header>
-
-<main>
-
-<section class="sec"><div class="wrap">
-  <div class="sec-hd">
-    <h2>裂き織りのバッグ</h2>
-    <span class="sub">隣の棟の工房から</span>
+<header class="site-header" id="top">
+  <input type="checkbox" id="navchk" hidden>
+  <div class="wrap header-inner">
+    <a class="brand" href="index.html" aria-label="Café Le Pont（カフェ るぽん）ホーム">
+      <img src="assets/img/logo-color.png" alt="Café Le Pont（カフェ るぽん）">
+    </a>
+    <label for="navchk" class="nav-toggle" aria-label="メニューを開く"><span></span><span></span><span></span></label>
+    <nav class="site-nav" aria-label="メインメニュー">
+      <a href="index.html#about">お店について</a>
+      <a href="index.html#interior">店内</a>
+      <a href="index.html#terrace">テラス・ベンチ</a>
+      <a href="index.html#menu">メニュー</a>
+      <a href="index.html#access">アクセス</a>
+      <a href="sakiori.html" aria-current="page">裂き織り</a>
+      <a class="social-link" href="https://www.instagram.com/rupon_208/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg><span>Instagram</span></a>
+      <a class="nav-cta" href="tel:09042567353"><b>090-4256-7353</b><small>ご予約・お問い合わせ</small></a>
+    </nav>
   </div>
+</header>
 
-  <div class="sakiori-lead">
-    <div class="frame frame-16x9">
-      <img src="assets/img/_placeholder.svg" alt="" width="400" height="300">
-      <span class="frame-note">★写真：織機と作りかけの布。工房の空気が分かるカット</span>
+<main id="main">
+
+  <section class="sk-hero">
+    <div class="wrap narrow">
+      <p class="section-label">Sakiori</p>
+      <h1>白河花子の咲織館</h1>
+      <p class="lead">和の心と、花のやさしさ。<br>裂き織りとともに、心ときめく出会いを。</p>
     </div>
-    <p class="sec-note">
-      店のすぐ隣、同じ敷地にある工房で織っています。着られなくなった着物や古い布を細く裂き、
-      横糸にして織り直したものが「裂き織り」です。<b>もとになる布が一枚ずつ違うので、同じ柄は二つとありません。</b>
-    </p>
-    <p class="sec-note">
-      店内に並べていますので、お食事のついでにご覧ください。手に取っていただけます。
-    </p>
-  </div>
-</div></section>
+  </section>
 
-<section class="sec"><div class="wrap">
-  <div class="sec-hd">
-    <h2>並んでいるもの</h2>
-    <span class="sub">在庫は入れ替わります</span>
-  </div>
+  <section class="section about">
+    <div class="wrap narrow sk-text">
+      <header class="section-head">
+        <p class="section-label">About</p>
+        <h2 class="section-title">裂き織り（さきおり）とは</h2>
+        <p class="section-sub">Tissage de tissus anciens</p>
+      </header>
+      <p>着物や古い布を細く裂き、それを糸の代わりにして織り込んでいく、日本の伝統的な織物です。丈夫で、使い込むほどに味わいが増していくのが魅力です。</p>
+      <p>咲織館の作品は、古布を一本一本ていねいに裂いて織り上げた一点物。日本の伝統を感じる帯も、ひとつひとつバッグに仕立てています。手づくりのため少しずつ表情が違いますが、そのぶん、咲織のあたたかさを感じていただけたらうれしいです。</p>
+    </div>
+  </section>
 
-  <!--
-    ★在庫の個別管理はしません（更新の手間を増やさないため）。
-      写真は「こういうものがあります」の例として置き、売り切れ表示は行いません。
-      新作を足したいときは <article class="work"> のかたまりを複製してください。
-  -->
+  <section class="section menu">
+    <div class="wrap">
+      <header class="section-head">
+        <p class="section-label">Items</p>
+        <h2 class="section-title">カフェるぽんで買えるもの</h2>
+        <p class="section-sub">En vente au café</p>
+      </header>
+      <ul class="sk-items">
+        <li>
+          <h3>咲織バッグ</h3>
+          <p class="price">3,000円</p>
+          <p>古布を裂いて織り上げた、裂き織りのバッグ。</p>
+        </li>
+        <li>
+          <h3>帯バッグ</h3>
+          <p class="price">2,000円</p>
+          <p>着物の帯を仕立て直した、一点物のバッグ。</p>
+        </li>
+      </ul>
+      <p class="sk-note">価格は2026年8月時点のものです。すべて一点物のため、入れ替わりがあります。<br>新作や在庫のようすは <a href="https://www.instagram.com/sirakawahanako/" target="_blank" rel="noopener">Instagram @sirakawahanako</a> でご覧ください。</p>
+    </div>
+  </section>
 
-  <div class="works">
-    <article class="work">
-      <div class="frame frame-1x1">
-        <img src="assets/img/_placeholder.svg" alt="" width="400" height="300" loading="lazy">
-        <span class="frame-note">★写真</span>
+  <section class="section">
+    <div class="wrap">
+      <header class="section-head">
+        <p class="section-label">Gallery</p>
+        <h2 class="section-title">作品のようす</h2>
+        <p class="section-sub">Sur Instagram</p>
+      </header>
+      <div class="sk-embeds">
+        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/reel/DcVUDkjTIM6/?utm_source=ig_embed" data-instgrm-version="14"><a href="https://www.instagram.com/reel/DcVUDkjTIM6/" target="_blank" rel="noopener">Instagram で見る</a></blockquote>
+        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/Dc58BzIlMkU/?utm_source=ig_embed" data-instgrm-version="14"><a href="https://www.instagram.com/p/Dc58BzIlMkU/" target="_blank" rel="noopener">Instagram で見る</a></blockquote>
+        <blockquote class="instagram-media" data-instgrm-permalink="https://www.instagram.com/p/DdiG-ZmTwdl/?utm_source=ig_embed" data-instgrm-version="14"><a href="https://www.instagram.com/p/DdiG-ZmTwdl/" target="_blank" rel="noopener">Instagram で見る</a></blockquote>
       </div>
-      <div class="body">
-        <h3 class="todo">★トートバッグ</h3>
-        <p><span class="todo">★●,●●●</span>円ぐらい</p>
-      </div>
-    </article>
-    <article class="work">
-      <div class="frame frame-1x1">
-        <img src="assets/img/_placeholder.svg" alt="" width="400" height="300" loading="lazy">
-        <span class="frame-note">★写真</span>
-      </div>
-      <div class="body">
-        <h3 class="todo">★手さげ</h3>
-        <p><span class="todo">★●,●●●</span>円ぐらい</p>
-      </div>
-    </article>
-    <article class="work">
-      <div class="frame frame-1x1">
-        <img src="assets/img/_placeholder.svg" alt="" width="400" height="300" loading="lazy">
-        <span class="frame-note">★写真</span>
-      </div>
-      <div class="body">
-        <h3 class="todo">★小物</h3>
-        <p><span class="todo">★●●●</span>円ぐらい</p>
-      </div>
-    </article>
-  </div>
+    </div>
+  </section>
 
-  <p class="sec-note sec-more">
-    値段は大きさと布によって変わります。<b>一点物のため、気に入ったものはその日にお持ち帰りください。</b>
-    お取り置きはご相談ください。
-  </p>
-</div></section>
+  <section class="section access">
+    <div class="wrap narrow">
+      <header class="section-head">
+        <p class="section-label">Where to buy</p>
+        <h2 class="section-title">委託販売のご案内</h2>
+        <p class="section-sub">Comment venir</p>
+      </header>
+      <table class="info-table">
+        <tbody>
+          <tr><th>販売場所</th><td>Café Le Pont（カフェ るぽん）店内</td></tr>
+          <tr><th>住所</th><td>福島県白河市向新蔵50番地</td></tr>
+          <tr><th>営業日</th><td>木・金・土・日・祝　11:00–15:00</td></tr>
+          <tr><th>アクセス</th><td>新白河駅から車で約11分（約4.8km）・駐車場あり</td></tr>
+          <tr><th>作り手</th><td><a href="https://www.instagram.com/sirakawahanako/" target="_blank" rel="noopener">白河花子の咲織館 @sirakawahanako</a></td></tr>
+        </tbody>
+      </table>
+      <p style="text-align:center"><a class="btn btn-ghost" href="index.html#menu">るぽんのランチメニューを見る</a></p>
+    </div>
+  </section>
 
-<section class="sec"><div class="wrap">
-  <div class="sec-hd">
-    <h2>作っている人</h2>
-  </div>
-  <div class="sakiori-lead">
-    <p class="sec-note">
-      <span class="todo">★作り手の紹介文（3〜4行）</span><br>
-      店主の妹が、隣の工房で織っています。<span class="todo">★いつから／どんなきっかけで／どんな布を使っているか</span>
-    </p>
-  </div>
-</div></section>
+  <section class="cta">
+    <div class="wrap narrow">
+      <p class="fr"><em>À bientôt chez Le Pont.</em></p>
+      <h2>お食事のついでに、手に取ってみてください。</h2>
+      <p>せいろ蒸しのランチと一緒に、世界にひとつの裂き織りとの出会いを。</p>
+      <div class="hero-actions">
+        <a class="btn btn-light" href="tel:09042567353">090-4256-7353 に電話する</a>
+        <a class="btn btn-outline" href="https://www.instagram.com/sirakawahanako/" target="_blank" rel="noopener">@sirakawahanako</a>
+      </div>
+    </div>
+  </section>
 
 </main>
 
-<footer class="site-ft"><div class="wrap">
-  <p class="name">カフェるぽん<small>CAFÉ LE PONT</small></p>
-  <dl>
-    <div><dt>営業時間</dt><dd><span class="num">11:00 – 15:00</span></dd></div>
-    <div><dt>定休日</dt><dd>月曜・火曜・水曜</dd></div>
-    <div><dt>住所</dt><dd>福島県白河市向新蔵50　／　駐車場8台</dd></div>
-    <div><dt>電話</dt><dd><a href="tel:0248000000" class="todo">0248-00-0000</a></dd></div>
-  </dl>
-  <nav class="fnav" aria-label="フッターメニュー">
-    <a href="index.html">ホーム</a>
-    <a href="menu.html">メニュー</a>
-    <a href="access.html">店舗案内・アクセス</a>
-    <a href="sakiori.html">裂き織り</a>
-    <a href="news.html">お知らせ</a>
-  </nav>
-  <p class="copy">© カフェるぽん</p>
-</div></footer>
+<footer class="site-footer">
+  <div class="wrap">
+    <img src="assets/img/logo-white.png" alt="Café Le Pont">
+    <p>福島県白河市向新蔵50番地 &middot; TEL 090-4256-7353</p>
+    <nav class="footer-nav" aria-label="フッターメニュー">
+      <a href="index.html#about">お店について</a>
+      <a href="index.html#interior">店内</a>
+      <a href="index.html#terrace">テラス・ベンチ</a>
+      <a href="index.html#menu">メニュー</a>
+      <a href="index.html#access">アクセス</a>
+      <a href="sakiori.html">裂き織り</a>
+      <a class="social-link" href="https://www.instagram.com/rupon_208/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg><span>Instagram</span></a>
+    </nav>
+    <p class="footer-tag">Le Pont &mdash; 橋がつなぐ、まちのカフェ</p>
+  </div>
+</footer>
 
-<nav class="fixbar" aria-label="電話と地図">
-  <a class="tel" href="tel:0248000000">
-    <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"><path d="M6 3h4l2 5-3 2a12 12 0 0 0 5 5l2-3 5 2v4a2 2 0 0 1-2 2A17 17 0 0 1 4 5a2 2 0 0 1 2-2z"/></svg>
+<div class="callbar" aria-label="電話・SNS">
+  <a class="cb-tel" href="tel:09042567353">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.3 1.8.6 2.6a2 2 0 0 1-.5 2.1L8.1 9.6a16 16 0 0 0 6 6l1.2-1.2a2 2 0 0 1 2.1-.5c.8.3 1.7.5 2.6.6a2 2 0 0 1 1.7 2z"/></svg>
     電話する
   </a>
-  <a class="map" href="https://www.google.com/maps/search/?api=1&amp;query=福島県白河市向新蔵50" target="_blank" rel="noopener">
-    <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linejoin="round"><path d="M12 21s7-6.4 7-11a7 7 0 1 0-14 0c0 4.6 7 11 7 11z"/><circle cx="12" cy="10" r="2.6"/></svg>
-    地図アプリで開く
+  <a class="cb-ig" href="https://www.instagram.com/rupon_208/" target="_blank" rel="noopener">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg>
+    Instagram
   </a>
-</nav>
+</div>
 
+<script async src="https://www.instagram.com/embed.js"></script>
+<script>
+/* モバイル: ナビ項目を選んだらハンバーガーメニューを自動で閉じる */
+(function(){
+  var chk=document.getElementById('navchk');
+  if(!chk)return;
+  document.querySelectorAll('.site-nav a').forEach(function(a){
+    a.addEventListener('click',function(){ chk.checked=false; });
+  });
+})();
+</script>
 </body>
 </html>
