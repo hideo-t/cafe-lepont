@@ -223,7 +223,7 @@ h1,h2,h3{line-height:1.35;margin:0;font-weight:500}
 .callbar .cb-ig{color:#fff;background:linear-gradient(135deg,var(--plum),var(--pink))}
 
 /* ---- responsive ---- */
-@media(max-width:900px){
+@media(max-width:1180px){
   .about-grid,.terrace-layout,.menu-signature,.access-grid{grid-template-columns:1fr}
   .pillars{grid-template-columns:1fr 1fr}
   .menu-grid{grid-template-columns:1fr 1fr}
@@ -231,11 +231,11 @@ h1,h2,h3{line-height:1.35;margin:0;font-weight:500}
   .gal-interior li:first-child{grid-column:span 2;grid-row:span 1;aspect-ratio:16/9}
   .menu-signature img{min-height:260px}
 }
-@media(max-width:900px){
+@media(max-width:1180px){
   /* backdrop-filter作る含有ブロックを解除しないとfixedパネルがヘッダー内に閉じ込められる */
   .site-header{backdrop-filter:none;-webkit-backdrop-filter:none;background:var(--cream)}
   .site-nav{position:fixed;inset:0 0 0 auto;width:min(82vw,320px);background:var(--cream);
-    flex-direction:column;align-items:stretch;padding:5rem 1.5rem 2rem;gap:.2rem;z-index:110;
+    flex-direction:column;align-items:stretch;padding:5rem 1.5rem 2rem;gap:.2rem;z-index:110;overflow-y:auto;
     transform:translateX(100%);transition:.3s;box-shadow:-10px 0 40px -20px rgba(0,0,0,.4)}
   .site-nav a{padding:.95rem .6rem;border-bottom:1px solid var(--line);color:var(--grape);font-size:1rem;font-weight:500}
   .nav-cta{flex-direction:row;gap:.5rem;justify-content:center;margin:.8rem 0 0}
@@ -325,6 +325,7 @@ h1,h2,h3{line-height:1.35;margin:0;font-weight:500}
       <a href="index.html#menu">メニュー</a>
       <a href="index.html#access">アクセス</a>
       <a href="sakiori.html" aria-current="page">裂き織り</a>
+      <a href="mukaishinkura.html">向新蔵さんぽ</a>
       <a class="social-link" href="https://www.instagram.com/rupon_208/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg><span>Instagram</span></a>
       <a class="nav-cta" href="tel:09042567353"><b>090-4256-7353</b><small>ご予約・お問い合わせ</small></a>
     </nav>
@@ -436,6 +437,7 @@ h1,h2,h3{line-height:1.35;margin:0;font-weight:500}
       <a href="index.html#menu">メニュー</a>
       <a href="index.html#access">アクセス</a>
       <a href="sakiori.html">裂き織り</a>
+      <a href="mukaishinkura.html">向新蔵さんぽ</a>
       <a class="social-link" href="https://www.instagram.com/rupon_208/" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg><span>Instagram</span></a>
     </nav>
     <p class="footer-tag">Le Pont &mdash; 橋がつなぐ、まちのカフェ</p>
